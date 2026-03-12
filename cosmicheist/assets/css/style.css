@@ -36,3 +36,12 @@ header, footer {
 .hero p{
     font-size:28px;
 }
+
+a {
+    color: #9fd3ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
