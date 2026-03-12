@@ -1,0 +1,3 @@
+<footer>
+  <p>&copy; 2026 CosmicHeist | Stealing the secrets of the universe</p>
+</footer>
