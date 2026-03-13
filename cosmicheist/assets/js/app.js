@@ -26,7 +26,8 @@ for (let i = 0; i < 300; i++) {
         y: Math.random() * canvas.height,
 
         radius: depth * 2,
-        speed: depth * 0.8,
+        speed: depth * 2.5,
+        twinkle: Math.random() * 0.05,
 
         color: `hsl(${Math.random()*360}, 80%, 70%)`
     });
@@ -40,6 +41,8 @@ function animateStars(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
 
     stars.forEach(star => {
+
+        star.radius += (Math.random() - 0.5) * star.twinkle;
 
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI*2);
@@ -61,12 +64,20 @@ function animateStars(){
 
     shootingStars.forEach((star, index) => {
 
+        const tailX = star.x - star.vx * star.length/10;
+        const tailY = star.y - star.vy * star.length/10;
+
+        const gradient = ctx.createLinearGradient(star.x, star.y, tailX, tailY);
+
+        gradient.addColorStop(0, "white");
+        gradient.addColorStop(1, "transparent");
+
         ctx.beginPath();
         ctx.moveTo(star.x, star.y);
-        ctx.lineTo(star.x - star.vx * star.length/10, star.y - star.vy * star.length/10);
+        ctx.lineTo(tailX, tailY);
 
-        ctx.strokeStyle = `hsl(${Math.random()*360}, 100%, 80%)`;
-        ctx.lineWidth = 2;
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = 3;
 
         ctx.shadowBlur = 15;
         ctx.shadowColor = "white";
