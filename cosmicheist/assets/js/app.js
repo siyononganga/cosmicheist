@@ -33,6 +33,8 @@ for (let i = 0; i < 300; i++) {
 
 }
 
+let shootingStars = [];
+
 function animateStars(){
 
     ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -53,11 +55,48 @@ function animateStars(){
 
     });
 
+    shootingStars.forEach((star, index) => {
+
+        ctx.beginPath();
+        ctx.moveTo(star.x, star.y);
+        ctx.lineTo(star.x - star.length, star.y + star.length);
+
+        ctx.strokeStyle = "white";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        star.x += star.speed;
+        star.y += star.speed;
+
+        star.life--;
+
+        if(star.life <= 0){
+            shootingStars.splice(index, 1);
+        }
+
+    });
+
     requestAnimationFrame(animateStars);
 
 }
 
 animateStars();
+
+function createShootingStar(){
+
+    shootingStars.push({
+        x: Math.random() * canvas.width,
+        y: 0,
+        length: Math.random() * 80 + 20,
+        speed: Math.random() * 8 + 6,
+        life: 100
+    });
+
+}
+
+if(Math.random() < 0.01){
+    createShootingStar();
+}
 
 window.addEventListener("resize", () => {
 
