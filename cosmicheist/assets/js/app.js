@@ -55,8 +55,8 @@ function animateStars(){
 
     });
 
-    if(Math.random() < 0.01){
-    createShootingStar();
+    if(Math.random() < 0.0005){
+        createShootingStar();
     }
 
     shootingStars.forEach((star, index) => {
@@ -93,7 +93,7 @@ animateStars();
 function createShootingStar(){
 
     const angle = Math.random() * Math.PI/3 + Math.PI/6; 
-    const speed = Math.random() * 10 + 10;
+    const speed = Math.random() * 20 + 20;
 
     shootingStars.push({
         x: Math.random() * canvas.width,
