@@ -55,6 +55,10 @@ function animateStars(){
 
     });
 
+    if(Math.random() < 0.01){
+    createShootingStar();
+    }
+
     shootingStars.forEach((star, index) => {
 
         ctx.beginPath();
@@ -92,10 +96,6 @@ function createShootingStar(){
         life: 100
     });
 
-}
-
-if(Math.random() < 0.01){
-    createShootingStar();
 }
 
 window.addEventListener("resize", () => {
