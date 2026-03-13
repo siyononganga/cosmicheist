@@ -93,7 +93,7 @@ animateStars();
 function createShootingStar(){
 
     const angle = Math.random() * Math.PI/3 + Math.PI/6; 
-    const speed = Math.random() * 6 + 6;
+    const speed = Math.random() * 10 + 10;
 
     shootingStars.push({
         x: Math.random() * canvas.width,
