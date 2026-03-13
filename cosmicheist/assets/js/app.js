@@ -69,7 +69,7 @@ function animateStars(){
         ctx.lineWidth = 2;
         ctx.stroke();
 
-        star.x += star.speed;
+        star.x -= star.speed;
         star.y += star.speed;
 
         star.life--;
