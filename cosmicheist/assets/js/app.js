@@ -42,7 +42,8 @@ function animateStars(){
 
     stars.forEach(star => {
 
-        star.radius += (Math.random() - 0.5) * star.twinkle;
+        star.radius += (Math.random() - 0.5) * (star.twinkle || 0);
+        star.radius = Math.max(0.2, star.radius);
 
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI*2);
