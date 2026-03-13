@@ -63,19 +63,23 @@ function animateStars(){
 
         ctx.beginPath();
         ctx.moveTo(star.x, star.y);
-        ctx.lineTo(star.x - star.length, star.y + star.length);
+        ctx.lineTo(star.x - star.vx * star.length/10, star.y - star.vy * star.length/10);
 
-        ctx.strokeStyle = "white";
+        ctx.strokeStyle = `hsl(${Math.random()*360}, 100%, 80%)`;
         ctx.lineWidth = 2;
+
+        ctx.shadowBlur = 15;
+        ctx.shadowColor = "white";
+
         ctx.stroke();
 
-        star.x -= star.speed;
-        star.y += star.speed;
+        star.x += star.vx;
+        star.y += star.vy;
 
         star.life--;
 
         if(star.life <= 0){
-            shootingStars.splice(index, 1);
+            shootingStars.splice(index,1);
         }
 
     });
@@ -88,12 +92,17 @@ animateStars();
 
 function createShootingStar(){
 
+    const angle = Math.random() * Math.PI/3 + Math.PI/6; 
+    const speed = Math.random() * 6 + 6;
+
     shootingStars.push({
         x: Math.random() * canvas.width,
         y: 0,
-        length: Math.random() * 80 + 20,
-        speed: Math.random() * 8 + 6,
-        life: 100
+        length: Math.random() * 120 + 40,
+        speed: speed,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        life: 120
     });
 
 }
