@@ -17,15 +17,17 @@ canvas.height = window.innerHeight;
 
 let stars = [];
 
-for (let i = 0; i < 250; i++) {
+for (let i = 0; i < 300; i++) {
+
+    let depth = Math.random();
 
     stars.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        radius: Math.random() * 1.5,
-        speed: Math.random() * 0.3,
 
-        // colorful stars
+        radius: depth * 2,
+        speed: depth * 0.8,
+
         color: `hsl(${Math.random()*360}, 80%, 70%)`
     });
 
