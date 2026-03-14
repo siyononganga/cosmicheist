@@ -1,72 +1,54 @@
-<!DOCTYPE html>
-<html>
+The Crystal Singularity Hypothesis
+Could the Universe Have Shattered Like a Cosmic Crystal?
 
-<head>
+By CosmicHeist — Stealing the secrets of the universe
 
-<title>The Crystal Singularity Hypothesis| CosmicHeist</title>
-
-<link rel="stylesheet" href="../style.css">
-
-</head>
-
-<body>
-
-<header class="navbar">
-
-<h1>CosmicHeist</h1>
-
-</header>
-
-<main class="article-page">
-
-<h1>Could the Universe Have Shattered Like a Cosmic Crystal?</h1>
-
-<p><em>Published on CosmicHeist</em></p>
-
-<p>
 For decades, scientists have tried to understand what happened at the beginning of time. 
 According to modern cosmology, the universe began in an event known as the Big Bang — an extremely hot, 
-dense state that expanded to form the universe we observe today. But what if the Big Bang wasn’t simply an explosion?
-What if it was the shattering of a cosmic crystal? This article explores a speculative idea I call the Crystal Singularity Hypothesis — 
+dense state that expanded to form the universe we observe today.
+
+But what if the Big Bang wasn’t simply an explosion?
+
+What if it was the shattering of a cosmic crystal?
+
+This article explores a speculative idea I call the Crystal Singularity Hypothesis — 
 a conceptual model that imagines the origin and evolution of the universe in a very different way.
-</p>
 
-<h1>The Beginning: An Infinite Crystal Singularity</h1>
+The Beginning: An Infinite Crystal Singularity
 
-<p>
-
-</p>
 In standard cosmology, the universe begins with a singularity, a point where density and curvature become infinite according to the equations of General Relativity.
 
-But what if this singularity wasn't a point? Imagine instead an infinite crystalline structure, perfectly ordered and infinitely dense — a cosmic lattice containing the potential of all spacetime.
+But what if this singularity wasn't a point?
+
+Imagine instead an infinite crystalline structure, perfectly ordered and infinitely dense — a cosmic lattice containing the potential of all spacetime.
 
 Rather than being a chaotic beginning, the universe may have started as a perfectly ordered structure.
 
-<h1>The Shockwave From the Future</h1>
+The Shockwave From the Future
 
-<p>
 Now imagine something strange happening.
 
 At the end of time, the universe collapses during a cosmic contraction sometimes called the Big Crunch.
 
-This collapse produces an enormous shockwave moving backward through spacetime. When that shockwave reaches the original crystal-like singularity, it shatters it.
+This collapse produces an enormous shockwave moving backward through spacetime.
+
+When that shockwave reaches the original crystal-like singularity, it shatters it.
 
 That shattering event is what we observe as the Big Bang.
-</p>
 
-<h1>The Universe as Shattered Fragments</h1>
+The Universe as Shattered Fragments
 
-<p>
-In this model, the expanding universe is made of fragments of that broken crystal. Each fragment represents a fundamental unit of space — almost like pixels of spacetime.
+In this model, the expanding universe is made of fragments of that broken crystal.
 
-Some modern physics theories already speculate about this possibility. For example, Loop Quantum Gravity proposes that spacetime may be composed of tiny discrete units rather than being perfectly smooth.
+Each fragment represents a fundamental unit of space — almost like pixels of spacetime.
+
+Some modern physics theories already speculate about this possibility. For example, 
+Loop Quantum Gravity proposes that spacetime may be composed of tiny discrete units rather than being perfectly smooth.
 
 In the Crystal Singularity model, these units emerge from the fracturing of the original cosmic structure.
-</p>
 
-<h1>Dark Energy: The Expanding Shockwave</h1>
+Dark Energy: The Expanding Shockwave
 
-<p>
 One of the biggest mysteries in cosmology is dark energy, the force accelerating the expansion of the universe.
 
 Astronomers discovered this phenomenon in the late 1990s, and it remains one of the greatest unsolved problems in physics.
@@ -74,22 +56,19 @@ Astronomers discovered this phenomenon in the late 1990s, and it remains one of 
 In the Crystal Singularity Hypothesis, dark energy may simply be the outward-moving shockwave from the initial shattering event.
 
 That shockwave continues to propagate through spacetime, pushing the fragments apart and expanding the universe.
-</p>
 
-<h1>Gravity: The Universe Trying to Reassemble</h1>
+Gravity: The Universe Trying to Reassemble
 
-<p>Another intriguing possibility is that gravity might represent the opposite effect.
+Another intriguing possibility is that gravity might represent the opposite effect.
 
 Instead of being just a curvature of spacetime, gravity could represent the cosmic crystal trying to restore itself.
 
 In other words, every gravitational attraction may be a tiny attempt by the universe to reassemble the original structure that existed before the Big Bang.
 
 This interpretation differs from the standard explanation of gravity described by Albert Einstein but provides an interesting conceptual picture.
-</p>
 
-<h1>Entropy and the Arrow of Time</h1>
+Entropy and the Arrow of Time
 
-<p>
 One of the deepest mysteries in physics is why time appears to move in only one direction.
 
 This direction is known as the arrow of time, and it is closely linked to increasing disorder, or entropy.
@@ -100,11 +79,10 @@ Entropy increases because the fragments continue dispersing away from the origin
 
 Meanwhile, the collapsing universe at the far future generates another shockwave moving in the opposite direction — 
 potentially producing reverse entropy and a mirror flow of time.
-</p>
 
-<h1>A Cyclic Universe</h1>
+A Cyclic Universe
 
-<p>If this model were true, the universe would not begin or end only once.
+If this model were true, the universe would not begin or end only once.
 
 Instead, the cosmos would follow an endless cycle:
 
@@ -119,13 +97,13 @@ The collapse generates a shockwave.
 That shockwave travels backward through time and shatters the crystal again.
 
 Each cycle would create a new universe.
+
 Similar cyclic ideas have been explored by physicists such as Roger Penrose, 
 though the mechanisms proposed are very different.
-</p>
 
-<h1>Speculation vs Science</h1>
+Speculation vs Science
 
-<p>It is important to emphasize that the Crystal Singularity Hypothesis is speculative.
+It is important to emphasize that the Crystal Singularity Hypothesis is speculative.
 
 At the moment it is a conceptual model rather than a fully developed scientific theory.
 
@@ -140,13 +118,16 @@ match astronomical observations
 But speculation has always played an important role in scientific discovery.
 
 Some of today’s most important ideas began as bold thought experiments.
-</p>
 
-<h1>Why Explore Ideas Like This?</h1>
+Why Explore Ideas Like This?
 
-<p>Physics advances by exploring possibilities. Even ideas that turn out to be incorrect can inspire new questions and lead to deeper understanding.
+Physics advances by exploring possibilities.
 
-After all, the universe itself remains full of mysteries. Dark matter, dark energy, and the true nature of spacetime are still unsolved problems.
+Even ideas that turn out to be incorrect can inspire new questions and lead to deeper understanding.
+
+After all, the universe itself remains full of mysteries.
+
+Dark matter, dark energy, and the true nature of spacetime are still unsolved problems.
 
 Perhaps the next breakthrough will come from someone willing to look at the universe from a completely new angle.
 
@@ -155,10 +136,3 @@ CosmicHeist will continue exploring both established physics and speculative ide
 After all…
 
 The cosmos may still have many secrets left to steal.
-</p>
-
-</main>
-
-</body>
-
-</html>
