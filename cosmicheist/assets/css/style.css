@@ -1,102 +1,134 @@
-body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  color: white;
-  background-image: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-header, footer {
-  background: rgba(0,0,0,0.7);
-  padding: 20px;
-  text-align: center;
+/* BODY */
+
+body{
+    font-family: Arial, sans-serif;
+    color:white;
+    line-height:1.6;
+
+    background-image:url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564");
+    background-size:cover;
+    background-position:center;
 }
 
-.blog-post {
-  background: rgba(0,0,0,0.65);
-  padding: 30px;
-  margin: 20px auto;
-  width: 70%;
-  border-radius: 10px;
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 10%;
+
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(6px);
+
+    position:sticky;
+    top:0;
 }
 
-.hero{
-    text-align:center;
-    padding:150px 20px;
-    background: rgba(0,0,0,0.5);
-}
-
-.hero h1{
-    font-size:70px;
-    margin-bottom:10px;
-}
-
-.hero p{
-    font-size:28px;
-}
-
-a {
-    color: #9fd3ff;
-    text-decoration: none;
-}
-
-a:hover {
-    color: white;
-}
-
-.articles{
-    padding:80px 20px;
-}
-
-.articles h2{
-    font-size:40px;
-    margin-bottom:40px;
-}
-
-.article-grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap:30px;
-}
-
-.article-card{
-    padding:30px;
-    border-radius:15px;
-
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-
-    border:1px solid rgba(255,255,255,0.2);
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.article-card:hover{
-    transform: translateY(-10px);
-    box-shadow:0 10px 30px rgba(0,0,0,0.5);
-}
-
-.article-card h3{
+.logo h1{
     font-size:26px;
 }
 
-.article-card p{
-    margin:15px 0;
+/* NAV LINKS */
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:30px;
 }
 
-.article-card a{
-    color:#6cf;
+.nav-links a{
     text-decoration:none;
+    color:white;
+    font-size:16px;
 }
 
-#starfield{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-1;
-    pointer-events:none;
+.nav-links a:hover{
+    color:#6cf;
+}
+
+/* SEARCH BAR */
+
+.search-bar input{
+    padding:6px 10px;
+    border-radius:5px;
+    border:none;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h2{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* BLOG GRID */
+
+.blog-grid{
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    padding:80px 10%;
+}
+
+/* BLOG CARDS */
+
+.blog-post{
+    background:rgba(0,0,0,0.65);
+
+    padding:30px;
+
+    border-radius:10px;
+
+    transition:transform 0.3s;
+}
+
+.blog-post:hover{
+    transform:translateY(-6px);
+}
+
+.blog-post h2{
+    margin-bottom:15px;
+}
+
+.blog-post p{
+    margin-bottom:15px;
+}
+
+.blog-post a{
+    text-decoration:none;
+    color:#6cf;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+
+    padding:30px;
+
+    background:rgba(0,0,0,0.7);
+
+    margin-top:60px;
 }
