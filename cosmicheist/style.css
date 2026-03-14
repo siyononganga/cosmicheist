@@ -193,3 +193,37 @@ footer{
 
     margin-top:60px;
 }
+
+.article-page{
+
+max-width:800px;
+
+margin:120px auto;
+
+padding:40px;
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(12px);
+
+border-radius:12px;
+
+border:1px solid rgba(255,255,255,0.3);
+
+}
+
+.article-page h1{
+
+margin-bottom:20px;
+
+}
+
+.article-page p{
+
+margin-bottom:20px;
+
+font-size:18px;
+
+line-height:1.7;
+
+}

@@ -128,13 +128,13 @@ const posts = [
 title: "The Arrow of Time",
 description: "Why entropy gives time a direction in the universe.",
 link: "#",
-featured: true
 },
 
 {
 title: "What Happened Before the Big Bang?",
 description: "Exploring theories about the universe before time began.",
 link: "#"
+featured: true
 },
 
 {
