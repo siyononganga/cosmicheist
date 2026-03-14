@@ -100,13 +100,11 @@ body{
 /* BLOG CARDS */
 
 .blog-post{
-    background:rgba(0,0,0,0.45);
-    backdrop-filter: blur(25px);
-
-    padding:30px;
-    border-radius:10px;
-
-    transition:transform 0.3s;
+  background: rgba(0,0,0,0.65);
+  padding: 30px;
+  margin: 20px auto;
+  width: 70%;
+  border-radius: 10px;
 }
 
 .blog-post:hover{
