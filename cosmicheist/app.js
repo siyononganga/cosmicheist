@@ -145,6 +145,22 @@ link: "#"
 
 ];
 
+const featuredContainer = document.getElementById("featured-post");
+
+posts.forEach(post => {
+
+if(post.featured){
+
+featuredContainer.innerHTML = `
+<h2>${post.title}</h2>
+<p>${post.description}</p>
+<a href="${post.link}">Read full article →</a>
+`;
+
+}
+
+});
+
 const container = document.getElementById("blog-container");
 
 posts.forEach(post => {
