@@ -127,7 +127,8 @@ const posts = [
 {
 title: "The Arrow of Time",
 description: "Why entropy gives time a direction in the universe.",
-link: "#"
+link: "#",
+featured: true
 },
 
 {
