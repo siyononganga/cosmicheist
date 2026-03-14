@@ -133,7 +133,7 @@ link: "#",
 {
 title: "What Happened Before the Big Bang?",
 description: "Exploring theories about the universe before time began.",
-link: "posts/the_big_bang.html",
+link: "posts/the-big-bang.html",
 featured: true
 },
 
