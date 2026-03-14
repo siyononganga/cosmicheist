@@ -121,3 +121,43 @@ window.addEventListener("resize", () => {
     canvas.height = window.innerHeight;
 
 });
+
+const posts = [
+
+{
+title: "The Arrow of Time",
+description: "Why entropy gives time a direction in the universe.",
+link: "#"
+},
+
+{
+title: "What Happened Before the Big Bang?",
+description: "Exploring theories about the universe before time began.",
+link: "#"
+},
+
+{
+title: "Is Space-Time an Illusion?",
+description: "New ideas suggesting space and time may emerge from quantum information.",
+link: "#"
+}
+
+];
+
+const container = document.getElementById("blog-container");
+
+posts.forEach(post => {
+
+const card = document.createElement("article");
+
+card.classList.add("blog-post");
+
+card.innerHTML = `
+<h2>${post.title}</h2>
+<p>${post.description}</p>
+<a href="${post.link}">Read more →</a>
+`;
+
+container.appendChild(card);
+
+});
