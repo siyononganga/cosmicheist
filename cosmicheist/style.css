@@ -165,6 +165,25 @@ padding:60px 10%;
 
 }
 
+/* SCROLL ANIMATION */
+
+.blog-post{
+
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+
+}
+
+/* when visible */
+
+.blog-post.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
 .blog-post:hover{
     transform:translateY(-6px);
 }

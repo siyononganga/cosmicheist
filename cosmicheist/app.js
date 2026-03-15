@@ -217,6 +217,10 @@ container.appendChild(card);
 
 });
 
+generateBlogCards();
+
+startScrollAnimations();
+
 const filterButtons = document.querySelectorAll(".category-filter button");
 
 filterButtons.forEach(button => {
@@ -244,3 +248,21 @@ post.style.display = "none";
 });
 
 });
+
+const observer = new IntersectionObserver((entries) => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+const hiddenElements = document.querySelectorAll(".blog-post");
+
+hiddenElements.forEach(el => observer.observe(el));
