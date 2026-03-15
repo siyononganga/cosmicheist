@@ -259,3 +259,23 @@ opacity:0.8;
 margin-bottom:25px;
 
 }
+
+.article-nav{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-top:40px;
+
+}
+
+.article-nav a{
+
+text-decoration:none;
+
+color:#6cf;
+
+font-weight:bold;
+
+}

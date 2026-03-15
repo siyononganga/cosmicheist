@@ -171,7 +171,7 @@ featured: true
 {
 title: "Is Space-Time an Illusion?",
 description: "New ideas suggesting space and time may emerge from quantum information.",
-link: "posts/is-space-time-an-illusion.html",
+link: "posts/is-spacetime-an-illusion.html",
 date: "2026-03-05",
 category: "Astronomy"
 }

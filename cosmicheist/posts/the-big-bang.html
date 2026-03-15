@@ -5,10 +5,10 @@
 
 <title>The Crystal Singularity Hypothesis| CosmicHeist</title>
 
-<h1>The Arrow of Time</h1>
+<h1>What Happened Before the Big Bang?</h1>
 
 <p class="article-meta">
-<span id="article-date">March 15, 2026</span> • 
+<span id="article-date">March 15, 2026</span> 
 <span id="reading-time"></span>
 </p>
 
@@ -163,6 +163,14 @@ After all…
 The cosmos may still have many secrets left to steal.
 </p>
 
+<div class="article-nav">
+
+<a id="prev-article"></a>
+
+<a id="next-article"></a>
+
+</div>
+
 </main>
 
 <script>
@@ -178,6 +186,50 @@ const words = text.trim().split(/\s+/).length;
 const readingTime = Math.ceil(words / 200);
 
 document.getElementById("reading-time").innerText = readingTime + " min read";
+
+}
+
+</script>
+
+<script>
+
+const posts = [
+
+{
+title:"The Arrow of Time",
+link:"arrow-of-time.html"
+},
+
+{
+title:"What Happened Before the Big Bang?",
+link:"the-big-bang.html"
+},
+
+{
+title:"Is Space-Time an Illusion?",
+link:"is-spacetime-an-illusion.html"
+}
+
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+
+let index = posts.findIndex(p => p.link === currentPage);
+
+const prev = document.getElementById("prev-article");
+const next = document.getElementById("next-article");
+
+if(index > 0){
+
+prev.href = posts[index-1].link;
+prev.innerText = "← " + posts[index-1].title;
+
+}
+
+if(index < posts.length-1){
+
+next.href = posts[index+1].link;
+next.innerText = posts[index+1].title + " →";
 
 }
 
