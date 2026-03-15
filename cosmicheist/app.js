@@ -1,12 +1,35 @@
 const searchInput = document.getElementById("search");
-searchInput.addEventListener("keyup", function() {
-    const filter = searchInput.value.toLowerCase();
-    const posts = document.querySelectorAll(".blog-post");
-    posts.forEach(post => {
-        const title = post.querySelector("h2").textContent.toLowerCase();
-        if(title.includes(filter)) post.style.display = "";
-        else post.style.display = "none";
-    });
+
+searchInput.addEventListener("keyup", function(){
+
+const filter = searchInput.value.toLowerCase();
+
+const postsOnPage = document.querySelectorAll(".blog-post");
+
+postsOnPage.forEach(post => {
+
+const title = post.querySelector("h2").textContent.toLowerCase();
+
+const description = post.querySelector("p:nth-of-type(2)").textContent.toLowerCase();
+
+const category = post.querySelector(".post-category").textContent.toLowerCase();
+
+if(
+title.includes(filter) ||
+description.includes(filter) ||
+category.includes(filter)
+){
+
+post.style.display = "block";
+
+}else{
+
+post.style.display = "none";
+
+}
+
+});
+
 });
 
 const canvas = document.getElementById("starfield");
@@ -146,7 +169,7 @@ title: "Is Space-Time an Illusion?",
 description: "New ideas suggesting space and time may emerge from quantum information.",
 link: "posts/is-space-time-an-illusion.html",
 date: "2026-03-05",
-category: "Quantum Physics"
+category: "Astronomy"
 }
 
 ];
