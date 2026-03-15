@@ -217,10 +217,6 @@ container.appendChild(card);
 
 });
 
-generateBlogCards();
-
-startScrollAnimations();
-
 const filterButtons = document.querySelectorAll(".category-filter button");
 
 filterButtons.forEach(button => {
