@@ -26,17 +26,20 @@ body{
 /* NAVBAR */
 
 .navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
 
-    padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 
-    background:rgba(0,0,0,0.45);
-    backdrop-filter:blur(10px);
+padding:20px 10%;
 
-    position:sticky;
-    top:0;
+background:rgba(0,0,0,0.45);
+
+position:sticky;
+top:0;
+
+z-index:1000;
+
 }
 
 .logo h1{
