@@ -128,14 +128,14 @@ const posts = [
 title: "The Arrow of Time",
 description: "Why entropy gives time a direction in the universe.",
 link: "#",
-date: "2026-03-15"
+date: "2026-03-10"
 },
 
 {
 title: "What Happened Before the Big Bang?",
 description: "Exploring theories about the universe before time began.",
 link: "posts/the-big-bang.html",
-date: "2026-03-10",
+date: "2026-03-15",
 featured: true
 },
 
