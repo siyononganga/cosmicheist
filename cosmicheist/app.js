@@ -203,6 +203,7 @@ posts.forEach(post => {
 const card = document.createElement("article");
 
 card.classList.add("blog-post");
+card.setAttribute("data-category", post.category);
 
 card.innerHTML = `
 <h2>${post.title}</h2>
@@ -213,5 +214,33 @@ card.innerHTML = `
 `;
 
 container.appendChild(card);
+
+});
+
+const filterButtons = document.querySelectorAll(".category-filter button");
+
+filterButtons.forEach(button => {
+
+button.addEventListener("click", () => {
+
+const category = button.getAttribute("data-category");
+
+const posts = document.querySelectorAll(".blog-post");
+
+posts.forEach(post => {
+
+if(category === "all" || post.getAttribute("data-category") === category){
+
+post.style.display = "";
+
+}else{
+
+post.style.display = "none";
+
+}
+
+});
+
+});
 
 });
