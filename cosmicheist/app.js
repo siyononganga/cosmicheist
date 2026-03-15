@@ -128,22 +128,27 @@ const posts = [
 title: "The Arrow of Time",
 description: "Why entropy gives time a direction in the universe.",
 link: "#",
+date: "2026-03-15"
 },
 
 {
 title: "What Happened Before the Big Bang?",
 description: "Exploring theories about the universe before time began.",
 link: "posts/the-big-bang.html",
+date: "2026-03-10",
 featured: true
 },
 
 {
 title: "Is Space-Time an Illusion?",
 description: "New ideas suggesting space and time may emerge from quantum information.",
-link: "#"
+link: "#",
+date: "2026-03-05"
 }
 
 ];
+
+posts.sort((a,b) => new Date(b.date) - new Date(a.date));
 
 const featuredContainer = document.getElementById("featured-post");
 
@@ -171,6 +176,7 @@ card.classList.add("blog-post");
 
 card.innerHTML = `
 <h2>${post.title}</h2>
+<p class="post-date">${post.date}</p>
 <p>${post.description}</p>
 <a href="${post.link}">Read more →</a>
 `;
