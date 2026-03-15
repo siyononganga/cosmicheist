@@ -127,8 +127,9 @@ const posts = [
 {
 title: "The Arrow of Time",
 description: "Why entropy gives time a direction in the universe.",
-link: "#",
-date: "2026-03-10"
+link: "posts/arrow-of-time.html",
+date: "2026-03-10",
+category: "Physics"
 },
 
 {
@@ -136,14 +137,16 @@ title: "What Happened Before the Big Bang?",
 description: "Exploring theories about the universe before time began.",
 link: "posts/the-big-bang.html",
 date: "2026-03-15",
+category: "Cosmology",
 featured: true
 },
 
 {
 title: "Is Space-Time an Illusion?",
 description: "New ideas suggesting space and time may emerge from quantum information.",
-link: "#",
-date: "2026-03-05"
+link: "posts/is-space-time-an-illusion.html",
+date: "2026-03-05",
+category: "Quantum Physics"
 }
 
 ];
@@ -177,6 +180,7 @@ card.classList.add("blog-post");
 card.innerHTML = `
 <h2>${post.title}</h2>
 <p class="post-date">${post.date}</p>
+<p class="post-category">${post.category}</p>
 <p>${post.description}</p>
 <a href="${post.link}">Read more →</a>
 `;
