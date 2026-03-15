@@ -2,6 +2,10 @@ const searchInput = document.getElementById("search");
 
 searchInput.addEventListener("keyup", function(){
 
+document.getElementById("blog-container").scrollIntoView({
+behavior: "smooth"
+});
+
 const filter = searchInput.value.toLowerCase();
 
 const postsOnPage = document.querySelectorAll(".blog-post");
