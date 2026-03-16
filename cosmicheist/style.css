@@ -27,6 +27,9 @@ body{
 
 .navbar{
 
+position:sticky;
+top:0;
+
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -34,9 +37,6 @@ align-items:center;
 padding:20px 10%;
 
 background:rgba(0,0,0,0.45);
-
-position:sticky;
-top:0;
 
 z-index:1000;
 
