@@ -262,3 +262,26 @@ entry.target.classList.add("show");
 const hiddenElements = document.querySelectorAll(".blog-post");
 
 hiddenElements.forEach(el => observer.observe(el));
+
+const heroText = document.querySelector(".hero-text");
+const navbar = document.querySelector(".navbar"); // sticky navbar
+
+window.addEventListener("scroll", () => {
+  // Distance from top of page
+  const scrollY = window.scrollY;
+
+  // Get navbar height
+  const navHeight = navbar.offsetHeight;
+
+  // Fade starts when text reaches navbar, ends when it's fully under
+  const fadeStart = navHeight;       // start fading when scrolling past navbar
+  const fadeEnd = navHeight + 150;   // fully faded after 150px
+
+  let opacity = 1;
+
+  if (scrollY > fadeStart) {
+    opacity = Math.max(1 - (scrollY - fadeStart) / (fadeEnd - fadeStart), 0);
+  }
+
+  heroText.style.opacity = opacity;
+});
