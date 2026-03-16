@@ -339,3 +339,19 @@ backdrop-filter:blur(6px);
 background:rgba(255,255,255,0.25);
 
 }
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  
+  /* Fades the bottom of the hero text so it blends under navbar */
+  -webkit-mask-image: linear-gradient(to top, transparent, black 30%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  
+  mask-image: linear-gradient(to top, transparent, black 30%);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  
+  transition: all 0.3s ease; /* smooth fade on scroll if needed */
+}
