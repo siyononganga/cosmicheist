@@ -18,6 +18,10 @@ body{
     background-position:center;
 }
 
+header{
+    width: 100%
+}
+
 #starfield{
     position: fixed;
     z-index:-1;
