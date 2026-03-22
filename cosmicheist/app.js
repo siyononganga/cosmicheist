@@ -155,8 +155,8 @@ const posts = [
 title: "What If Dark Matter Isn't a What, But a Who?",
 description: "Could we be asking the wrong questions about the Dark Matter?",
 link: "posts/dark-matter.html",
-date: "2026-03-10",
-category: "Physics"
+date: "2026-03-22",
+category: "Cosmology"
 },
 
 {
