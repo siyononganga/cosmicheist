@@ -45,3 +45,56 @@ window.addEventListener("scroll", () => {
                                                 }
                                                   });
                                                   });
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+.article-page {
+      max-width: 800px;
+          margin: auto;
+              padding: 20px;
+              }
+}
+
+@media (max-width: 768px) {
+
+      /* 📦 Blog cards */
+          .blog-post {
+                  width: 90%;
+                          margin: 20px auto;
+                                  padding: 15px;
+                                      }
+
+                                          /* 📝 Text */
+                                              .blog-post p {
+                                                      font-size: 16px;
+                                                              text-align: left; /* override justify if you used it */
+                                                                  }
+
+                                                                      /* 🧠 Headings */
+                                                                          .blog-post h1 {
+                                                                                  font-size: 24px;
+                                                                                      }
+
+                                                                                          .blog-post h2 {
+                                                                                                  font-size: 20px;
+                                                                                                      }
+
+                                                                                                          /* 🔍 Search bar */
+                                                                                                              #search {
+                                                                                                                      width: 90%;
+                                                                                                                              font-size: 16px;
+                                                                                                                                  }
+
+                                                                                                                                      /* 🧭 Navbar */
+                                                                                                                                          .navbar {
+                                                                                                                                                  flex-direction: column;
+                                                                                                                                                          align-items: center;
+                                                                                                                                                              }
+
+                                                                                                                                                                  /* 🌌 Article padding */
+                                                                                                                                                                      .article-page {
+                                                                                                                                                                              padding: 15px;
+                                                                                                                                                                                  }
+
+                                                                                                                                                                                  }
+}
