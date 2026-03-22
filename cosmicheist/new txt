@@ -1,0 +1,47 @@
+<nav class="navbar">
+  <a href="#hero">Home</a>
+    <a href="#featured">Featured</a>
+      <a href="#blog">Articles</a>
+        <a href="#about">About</a>
+        </nav>
+
+        <section id="hero">...</section>
+        <section id="featured">...</section>
+        <section id="blog">...</section>
+        <section id="about">...</section>
+
+.navbar a {
+    color: white;
+      text-decoration: none;
+        padding: 5px 10px;
+          transition: color 0.3s;
+          }
+
+          .navbar a.active {
+            color: #ffcc00; /* highlight color */
+              font-weight: bold;
+              }
+}
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+                if (scrollY >= sectionTop - sectionHeight / 3) {
+                      current = section.getAttribute("id");
+                          }
+                            });
+
+                              navLinks.forEach(link => {
+                                  link.classList.remove("active");
+                                      if (link.getAttribute("href") === "#" + current) {
+                                            link.classList.add("active");
+                                                }
+                                                  });
+                                                  });

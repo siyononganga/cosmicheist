@@ -47,6 +47,18 @@ z-index:1000;
 
 }
 
+.navbar a {
+      color: white;
+        text-decoration: none;
+          padding: 5px 10px;
+            transition: color 0.3s;
+            }
+
+            .navbar a.active {
+              color: #ffcc00; /* highlight color */
+                font-weight: bold;
+                }
+
 .logo h1{
     font-size:26px;
 }
