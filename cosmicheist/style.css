@@ -424,3 +424,13 @@ background:rgba(255,255,255,0.25);
     align-items: center;
 }
 }
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    z-index: 9999;
+}

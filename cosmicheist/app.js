@@ -290,21 +290,32 @@ const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navbar a");
 
 window.addEventListener("scroll", () => {
-  let current = "";
+let current = "";
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
+sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
 
-                if (scrollY >= sectionTop - sectionHeight / 3) {
-                      current = section.getAttribute("id");
-                          }
-                            });
+    if (scrollY >= sectionTop - sectionHeight / 3) {
+    current = section.getAttribute("id");
+    }
+    });
 
-                              navLinks.forEach(link => {
-                                  link.classList.remove("active");
-                                      if (link.getAttribute("href") === "#" + current) {
-                                            link.classList.add("active");
-                                                }
-                                                  });
-                                                  });
+navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+    link.classList.add("active");
+    }
+});
+});
+
+window.addEventListener("scroll", () => {
+
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+    document.getElementById("progress-bar").style.width = scrollPercent + "%";
+
+    });
