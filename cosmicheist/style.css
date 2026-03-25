@@ -243,17 +243,6 @@ transform:translateY(0);
 }
 
 /* FOOTER */
-
-footer{
-    text-align:center;
-
-    padding:30px;
-
-    background:rgba(0,0,0,0.7);
-
-    margin-top:60px;
-}
-
 .site-footer {
         margin-top: 40px;
             padding: 20px;
