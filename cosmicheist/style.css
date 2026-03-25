@@ -67,10 +67,16 @@ header{
     font-size:16px;
 }
 
+.nav-links.active {
+        display: block;
+        }
+}
+
 /* Active link */
 .nav-links a.active {
-    color: #ffcc00;
-    font-weight: bold;
+        color: #ffcc00;
+            font-weight: bold;
+}
 }
 
 .logo h1{
