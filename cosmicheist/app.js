@@ -331,7 +331,7 @@ menuToggle.addEventListener("click", () => {
         if (navContainer.classList.contains("active")) {
                 menuToggle.textContent = "🍟";
                     } else {
-                            menuToggle.textContent = "🍟";
+                            menuToggle.textContent = "🍔";
                                 }
                                 });
 
@@ -341,7 +341,7 @@ menuToggle.addEventListener("click", () => {
                                 navItems.forEach(link => {
                                     link.addEventListener("click", () => {
                                             navContainer.classList.remove("active");
-                                                    menuToggle.textContent = "🍟";
+                                                    menuToggle.textContent = "🍔";
                                                         });
                                                         });
 
@@ -353,6 +353,6 @@ menuToggle.addEventListener("click", () => {
 
                                                                                 if (!isClickInside) {
                                                                                         navContainer.classList.remove("active");
-                                                                                                menuToggle.textContent = "🍟";
+                                                                                                menuToggle.textContent = "🍔";
                                                                                                     }
                                                                                                     });
