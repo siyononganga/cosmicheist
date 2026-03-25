@@ -103,8 +103,10 @@ header{
 }
 
 .menu-toggle {
-        display: none;
-                }
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
 
 /* HERO */
 
