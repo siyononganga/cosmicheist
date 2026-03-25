@@ -491,8 +491,8 @@ background:rgba(255,255,255,0.25);
     display: none;
     /*flex-direction: column;
     align-items: center;
-    gap: 12px;
-}*/
+    gap: 12px;*/
+}
 
 .nav-links.active ul {
     display: flex;
