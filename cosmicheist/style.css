@@ -28,6 +28,7 @@ header{
 
 /* NAVBAR */
 .navbar {
+            flex-wrap: wrap;
         position: sticky;
             top: 0;
 
