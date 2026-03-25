@@ -321,44 +321,37 @@ window.addEventListener("scroll", () => {
     });
 // 🍔 Get elements
 const menuToggle = document.getElementById("menu-toggle");
-const navlinks = document.getElementById("nav-links");
+const navContainer = document.getElementById("nav-links");
 
-// 🍔 Toggle menu on click
+// 🍔 Toggle menu
 menuToggle.addEventListener("click", () => {
+    navContainer.classList.toggle("active");
 
-    navlinks.classList.toggle("active");
+        if (navContainer.classList.contains("active")) {
+                menuToggle.textContent = "🍔✨";
+                    } else {
+                            menuToggle.textContent = "🍔";
+                                }
+                                });
 
-    // 😂 Fun mode: change burger icon
-    if (navlinks.classList.contains("active")) {
-        menuToggle.textContent = "🍔✨";
-    } else {
-        menuToggle.textContent = "🍔";
-                                    }
+                                // 🔗 Close when link clicked
+                                const navItems = document.querySelectorAll(".nav-links a");
 
-                                    });
+                                navItems.forEach(link => {
+                                    link.addEventListener("click", () => {
+                                            navContainer.classList.remove("active");
+                                                    menuToggle.textContent = "🍔";
+                                                        });
+                                                        });
 
+                                                        // 🧠 Close when clicking outside
+                                                        document.addEventListener("click", (e) => {
+                                                            const isClickInside =
+                                                                    navContainer.contains(e.target) ||
+                                                                            menuToggle.contains(e.target);
 
-                                    // Close menu when a link is clicked (important for mobile UX)
-                                    const navItems = document.querySelectorAll(".nav-links ul");
-
-                                    navItems.forEach(link => {
-                                        link.addEventListener("click", () => {
-                                                navlinks.classList.remove("active");
-                                                        menuToggle.textContent = "🍔";
-                                                            });
-                                                            });
-
-
-                                                            // Close menu when clicking outside
-                                                            document.addEventListener("click", (e) => {
-
-                                                                const isClickInside =
-                                                                        navlinks.contains(e.target) ||
-                                                                                menuToggle.contains(e.target);
-
-                                                                                    if (!isClickInside) {
-                                                                                            navlinks.classList.remove("active");
-                                                                                                    menuToggle.textContent = "🍔";
-                                                                                                        }
-
-                                                                                                        });
+                                                                                if (!isClickInside) {
+                                                                                        navContainer.classList.remove("active");
+                                                                                                menuToggle.textContent = "🍔";
+                                                                                                    }
+                                                                                                    });
