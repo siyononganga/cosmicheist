@@ -465,9 +465,9 @@ background:rgba(255,255,255,0.25);
 /* SHOW burger */
 .menu-toggle {
     display: block;
-    font-size: 26px;
+    /*font-size: 26px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease;*/
 }
 
 /* fun hover effect */
