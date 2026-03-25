@@ -329,7 +329,7 @@ menuToggle.addEventListener("click", () => {
     navContainer.classList.toggle("active");
 
         if (navContainer.classList.contains("active")) {
-                menuToggle.textContent = "🍔✨";
+                menuToggle.textContent = "❌";
                     } else {
                             menuToggle.textContent = "🍔";
                                 }
