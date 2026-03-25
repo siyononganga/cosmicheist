@@ -70,13 +70,11 @@ header{
 .nav-links.active {
         display: block;
         }
-}
 
 /* Active link */
 .nav-links a.active {
         color: #ffcc00;
             font-weight: bold;
-}
 }
 
 .logo h1{
