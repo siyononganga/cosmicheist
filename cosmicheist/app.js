@@ -319,3 +319,46 @@ window.addEventListener("scroll", () => {
     document.getElementById("progress-bar").style.width = scrollPercent + "%";
 
     });
+// 🍔 Get elements
+const menuToggle = document.getElementById("menu-toggle");
+const navlinks = document.getElementById("nav-links");
+
+// 🍔 Toggle menu on click
+menuToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+        // 😂 Fun mode: change burger icon
+            if (navLinks.classList.contains("active")) {
+                    menuToggle.textContent = "🍔✨";
+                        } else {
+                                menuToggle.textContent = "🍔";
+                                    }
+
+                                    });
+
+
+                                    // 🔗 Close menu when a link is clicked (important for mobile UX)
+                                    const navItems = document.querySelectorAll(".nav-links a");
+
+                                    navItems.forEach(link => {
+                                        link.addEventListener("click", () => {
+                                                navLinks.classList.remove("active");
+                                                        menuToggle.textContent = "🍔";
+                                                            });
+                                                            });
+
+
+                                                            // Close menu when clicking outside
+                                                            document.addEventListener("click", (e) => {
+
+                                                                const isClickInside =
+                                                                        navLinks.contains(e.target) ||
+                                                                                menuToggle.contains(e.target);
+
+                                                                                    if (!isClickInside) {
+                                                                                            navLinks.classList.remove("active");
+                                                                                                    menuToggle.textContent = "🍔";
+                                                                                                        }
+
+                                                                                                        });
