@@ -290,6 +290,7 @@ const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navbar a");
 
 window.addEventListener("scroll", () => {
+const scrollY = window.scrollY
 let current = "";
 
 sections.forEach(section => {
