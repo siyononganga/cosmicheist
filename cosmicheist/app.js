@@ -339,7 +339,7 @@ menuToggle.addEventListener("click", () => {
 
 
                                     // Close menu when a link is clicked (important for mobile UX)
-                                    const navItems = document.querySelectorAll(".nav-links a");
+                                    const navItems = document.querySelectorAll(".nav-links ul");
 
                                     navItems.forEach(link => {
                                         link.addEventListener("click", () => {
