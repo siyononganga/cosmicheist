@@ -328,11 +328,11 @@ menuToggle.addEventListener("click", () => {
 
     navlinks.classList.toggle("active");
 
-        // 😂 Fun mode: change burger icon
-            if (navlinks.classList.contains("active")) {
-                    menuToggle.textContent = "🍔✨";
-                        } else {
-                                menuToggle.textContent = "🍔";
+    // 😂 Fun mode: change burger icon
+    if (navlinks.classList.contains("active")) {
+        menuToggle.textContent = "🍔✨";
+    } else {
+        menuToggle.textContent = "🍔";
                                     }
 
                                     });
