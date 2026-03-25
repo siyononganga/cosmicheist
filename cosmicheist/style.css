@@ -28,36 +28,50 @@ header{
 }
 
 /* NAVBAR */
+.navbar {
+        position: sticky;
+            top: 0;
 
-.navbar{
+                display: flex;
+                    justify-content: space-between;
+                        align-items: center;
 
-position:sticky;
-top:0;
+                            padding: 20px 10%;
 
-display:flex;
-justify-content:space-between;
-align-items:center;
+                                background: rgba(0,0,0,0.35);
+                                    backdrop-filter: blur(10px);
 
-padding:20px 10%;
+                                        z-index: 1000;
+                                        }
 
-background:rgba(0,0,0,0.35);
-backdrop-filter:blur(10px);
+/* Fix nav links layout */
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
 
-z-index:1000;
-
+    margin: 0;
+    padding: 0;
 }
 
-.navbar a {
-      color: white;
-        text-decoration: none;
-          padding: 5px 10px;
-            transition: color 0.3s;
-            }
+/* Prevent overflow */
+.nav-links {
+    max-width: 100%;
+}
 
-            .navbar a.active {
-              color: #ffcc00; /* highlight color */
-                font-weight: bold;
-                }
+/* Links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+/* Active link */
+.nav-links a.active {
+    color: #ffcc00;
+    font-weight: bold;
+}
 
 .logo h1{
     font-size:26px;
@@ -424,6 +438,7 @@ background:rgba(255,255,255,0.25);
 .blog-post p {
   font-size: 16px;
   line-height: 1.6;
+  text-align: left; /* important for mobile readability */
 }
 
 /* Headings */
@@ -441,11 +456,27 @@ background:rgba(255,255,255,0.25);
     font-size: 16px;
 }
 
-/* Navbar */
+/* 🔥 Navbar fix */
 .navbar {
     flex-direction: column;
     align-items: center;
+    gap: 10px; /* adds spacing between elements */
 }
+
+/* 🔥 Fix nav links layout */
+.nav-links ul {
+    flex-wrap: wrap;          /* prevents overflow */
+    justify-content: center;  /* center links */
+    gap: 15px;
+}
+
+/* 🔥 Fix search container */
+.search-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 }
 
 @media (max-width: 768px) {
