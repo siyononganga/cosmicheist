@@ -1,5 +1,4 @@
 /* RESET */
-
 *{
     margin:0;
     padding:0;
@@ -16,6 +15,7 @@ body{
     background-image:url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564");
     background-size:cover;
     background-position:center;
+    background:red;
 }
 
 header{
