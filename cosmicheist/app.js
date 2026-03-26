@@ -64,7 +64,9 @@ let shootingStars = [];
 
 function animateStars(){
 
-    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "rgba(0, 0, 0, 0)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     stars.forEach(star => {
 
