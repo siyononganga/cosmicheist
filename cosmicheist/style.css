@@ -434,6 +434,25 @@ background:rgba(255,255,255,0.25);
                                 z-index: 9999;
 }
 
+.social-icons {
+        margin-top: 15px;
+            display: flex;
+                justify-content: center;
+                    gap: 20px;
+                    }
+
+                    .social-icons a {
+                        color: white;
+                            font-size: 20px;
+                                transition: all 0.3s ease;
+                                }
+
+                                .social-icons a:hover {
+    color: #6cf;
+    transform: scale(1.2);
+    text-shadow: 0 0 10px #6cf;
+}        }
+
 @media (max-width: 400px) {
 
 body {
