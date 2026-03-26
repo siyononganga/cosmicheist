@@ -468,6 +468,7 @@ body {
 #search {
     width: 90%;
     font-size: 16px;
+    position: center;
 }
 
 /* Navbar layout */
