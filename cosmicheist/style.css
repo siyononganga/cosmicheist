@@ -547,4 +547,8 @@ body {
     flex-direction: column;
     gap: 8px;
 }
+
+.social-icons {
+    gap: 15px;
+}
 }
