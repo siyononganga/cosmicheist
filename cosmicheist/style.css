@@ -428,9 +428,6 @@ background:rgba(255,255,255,0.25);
 }
 
 @media (max-width: 400px) {
-body{
-    background: blue;
-}
 /* Blog cards */
 .blog-post {
   width: 90%;
