@@ -11,7 +11,6 @@ body{
     font-family: Arial, sans-serif;
     line-height:1.6;
     color:white;
-    background-image: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564");
     background-size:cover;
     background-position:center;
 }
@@ -428,6 +427,12 @@ background:rgba(255,255,255,0.25);
 }
 
 @media (max-width: 400px) {
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+}  
 /* Blog cards */
 .blog-post {
   width: 90%;
