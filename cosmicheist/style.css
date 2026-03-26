@@ -13,17 +13,24 @@ body{
     color:white;
     background-size:cover;
     background-position:center;
+    position: relative;
+    z-index: 0;
 }
 
 header{
     width: 100%
 }
 
-#starfield{
+#starfield {
     position: fixed;
-    z-index:-1;
-}
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
+    z-index: -2; /* 👈 push it further back */
+    pointer-events: none; /* 👈 prevents weird interactions */
+}
 /* NAVBAR */
 .navbar {
             flex-wrap: wrap;
