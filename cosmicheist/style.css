@@ -73,13 +73,13 @@ header{
 }
 
 .nav-links.active {
-        display: block;
-        }
+    display: block;
+}
 
 /* Active link */
 .nav-links a.active {
-        color: #ffcc00;
-            font-weight: bold;
+    color: #ffcc00;
+    font-weight: bold;
 }
 
 .logo h1{
@@ -497,9 +497,9 @@ body {
 /* Stack links vertically */
 .nav-links ul {
     display: none;
-    /*flex-direction: column;
+    flex-direction: column;
     align-items: center;
-    gap: 12px;*/
+    gap: 12px;
 }
 
 .nav-links.active ul {
