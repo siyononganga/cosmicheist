@@ -186,6 +186,7 @@ header {
 .article-page {
   max-width: 800px;
   margin: auto;
+  gap: 20px;
   padding: 20px;
 }
 
