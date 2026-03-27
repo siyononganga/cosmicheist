@@ -64,7 +64,9 @@ let shootingStars = [];
 
 function animateStars(){
 
-    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "rgba(0, 0, 0, 0)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     stars.forEach(star => {
 
@@ -146,17 +148,18 @@ window.addEventListener("resize", () => {
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 });
 
 const posts = [
 
 {
-title: "The Arrow of Time",
-description: "Why entropy gives time a direction in the universe.",
-link: "posts/arrow-of-time.html",
-date: "2026-03-10",
-category: "Physics"
+title: "What If Dark Matter Isn't a What, But a Who?",
+description: "Could we be asking the wrong questions about Dark Matter?",
+link: "posts/dark-matter.html",
+date: "2026-03-22",
+category: "Cosmology"
 },
 
 {
@@ -285,3 +288,74 @@ window.addEventListener("scroll", () => {
 
   heroText.style.opacity = opacity;
 });
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar a");
+
+window.addEventListener("scroll", () => {
+const scrollY = window.scrollY;
+let current = "";
+
+sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    if (scrollY >= sectionTop - sectionHeight / 3) {
+    current = section.getAttribute("id");
+    }
+    });
+
+navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+    link.classList.add("active");
+    }
+});
+});
+
+window.addEventListener("scroll", () => {
+
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+    document.getElementById("progress-bar").style.width = scrollPercent + "%";
+
+    });
+// 🍔 Get elements
+const menuToggle = document.getElementById("menu-toggle");
+const navContainer = document.getElementById("nav-links");
+
+// 🍔 Toggle menu
+menuToggle.addEventListener("click", () => {
+    navContainer.classList.toggle("active");
+
+        if (navContainer.classList.contains("active")) {
+                menuToggle.textContent = "❌";
+                    } else {
+                            menuToggle.textContent = "🍔";
+                                }
+                                });
+
+                                // 🔗 Close when link clicked
+                                const navItems = document.querySelectorAll(".nav-links a");
+
+                                navItems.forEach(link => {
+                                    link.addEventListener("click", () => {
+                                            navContainer.classList.remove("active");
+                                                    menuToggle.textContent = "🍔";
+                                                        });
+                                                        });
+
+                                                        // 🧠 Close when clicking outside
+                                                        document.addEventListener("click", (e) => {
+                                                            const isClickInside =
+                                                                    navContainer.contains(e.target) ||
+                                                                            menuToggle.contains(e.target);
+
+                                                                                if (!isClickInside) {
+                                                                                        navContainer.classList.remove("active");
+                                                                                                menuToggle.textContent = "🍔";
+                                                                                                    }
+                                                                                                    });

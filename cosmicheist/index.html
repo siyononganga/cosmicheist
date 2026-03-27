@@ -2,73 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CosmicHeist</title>
-
-    <!-- Link to your CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- SEO meta -->
-    <meta name="description" content="CosmicHeist — Stealing the secrets of the universe. Exploring physics, astronomy, and cosmology.">
-</head>
-<body>
-
-    <canvas id="starfield"></canvas>
-
-    <!-- Header / Navigation -->
-    <header class="navbar">
-            <div class="logo">
-                <h1>CosmicHeist</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Physics</a></li>
-                <li><a href="#">Astronomy</a></li>
-                <li><a href="#">Cosmology</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-            <div class="search-bar">
-                <input type="text" id="search" placeholder="Search posts...">
-            </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Stealing the secrets of the universe</h2>
-            <p>Welcome to CosmicHeist — exploring physics, cosmology, entropy, and the deep structure of reality.</p>
-        </div>
-    </section>
-
-    <section class="featured">
-
-        <div class="featured-content" id="featured-post">
-
-        </div>
-
-    </section>
-    <section class="category">
-    <div class="category-filter">
-
-        <button data-category="all">All</button>
-        <button data-category="Physics">Physics</button>
-        <button data-category="Cosmology">Cosmology</button>
-        <button data-category="Astronomy">Astronomy</button>
-
-    </div>
-    </section>
-
-    <!-- Main Content / Blog Posts -->
-    <main>
-        <section class="blog-grid" id="blog-container"></section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 CosmicHeist. All rights reserved.</p>
-    </footer>
-
-    <!-- Link to your JS -->
-    <script src="app.js"></script>
-</body>
-</html>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CosmicHeist</title>
+            
+                <!-- Link to your CSS -->
+                    <link rel="stylesheet" href="style.css">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+                    
+                        <!-- SEO meta -->
+                            <meta name="description" content="CosmicHeist — Stealing the secrets of the universe. Exploring physics, astronomy, and cosmology.">
+                            </head>
+                            <body>
+                            
+                                <canvas id="starfield"></canvas>
+                                
+                                    <!-- Header / Navigation -->
+                                        <header class="navbar">
+                                                    <div class="logo">
+                                                            <a href="index.html">
+                                                                    <img src="images/logo-4.png" alt="CosmicHeist Logo">
+                                                                        </a>
+                                                                        </div>
+                                                                                <div class="menu-toggle" id="menu-toggle">🍔</div>
+                                                                                
+                                                                                                                                <nav class="nav-links" id="nav-links">
+                                                                                                                                                <ul>
+                                                                                                                                                                    <li><a href="index.html">Home</a></li>
+                                                                                                                                                                                        <li><a href="about.html">About</a></li>
+                                                                                                                                                                                                            <li><a href="contact.html">Contact</a></li>
+                                                                                                                                                                                                                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                                                                                                                                                                                                                                </ul>    
+                                                                                                                                                                                                                                                            </nav>
+                                                                                                                                                                                                                                                                        <div class="search-bar">
+                                                                                                                                                                                                                                                                                        <input type="text" id="search" placeholder="Search posts...">
+                                                                                                                                                                                                                                                                                                    </div>                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        </header>
+                                                                                                                                                                                                                                                                                                            <!-- Hero Section -->
+                                                                                                                                                                                                                                                                                                                <section class="hero" id="hero">
+                                                                                                                                                                                                                                                                                                                        <div class="hero-text">
+                                                                                                                                                                                                                                                                                                                                    <h2>Stealing the secrets of the universe</h2>
+                                                                                                                                                                                                                                                                                                                                                <p>Welcome to CosmicHeist — exploring physics, cosmology, entropy, and the deep structure of reality.</p>
+                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                            </section>
+                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                <section class="about" id="about"></section>
+                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                    <section class="featured" id="featured">
+                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                            <div class="featured-content" id="featured-post">
+                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                        </section>
+                                                                                                                                                                                                                                                                                                                                                                                            <section class="category">
+                                                                                                                                                                                                                                                                                                                                                                                                <div class="category-filter">
+                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                        <button data-category="all">All</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                <button data-category="Physics">Physics</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                        <button data-category="Cosmology">Cosmology</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                <button data-category="Astronomy">Astronomy</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        </section>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                            <!-- Main Content / Blog Posts -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                <main>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        <section class="blog-grid" id="blog-container"></section>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            </main>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                <!-- Link to your JS -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <script src="app.js"></script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <footer class="site-footer">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <p>© 2026 CosmicHeist</p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="footer-links">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <a href="about.html">About</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <a href="contact.html">Contact</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <a href="privacy.html">Privacy Policy</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="social-icons">
+    <a href="https://facebook.com/https://https://www.facebook.com/CosmicHeist" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+</div>    </footer>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </body>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </html>
