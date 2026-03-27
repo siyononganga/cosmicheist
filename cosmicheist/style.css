@@ -90,8 +90,9 @@ header{
     font-weight: bold;
 }
 
-.logo h1{
-    font-size:26px;
+.logo img {
+    height: 40px; /* adjust size */
+    width: auto;
 }
 
 .nav-links a:hover{
