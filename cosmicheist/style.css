@@ -95,8 +95,8 @@ header {
 }
 
 .logo img {
-  height: 60px; /* adjust size */
-  width: fit-content;
+  height: auto; /* adjust size */
+  width: 120px;
 }
 
 .nav-links a:hover {
