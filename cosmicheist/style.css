@@ -42,7 +42,7 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  padding: 20px 10%;
+  padding: 15px 5%;
 
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(10px);
@@ -104,6 +104,14 @@ header {
 }
 
 /* SEARCH BAR */
+
+/* Fix search container */
+.search-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+}
 
 .search-bar input {
   padding: 6px 10px;
@@ -499,13 +507,6 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  /* Fix search container */
-  .search-bar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
   }
 
   .footer-links {
