@@ -97,6 +97,7 @@ header {
 .logo img {
   height: 40px; /* adjust size */
   width: 100px;
+  margin-right: auto;
 }
 
 .nav-links a:hover {
