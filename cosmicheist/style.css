@@ -98,7 +98,7 @@ header {
 
 .logo img {
   height: 60; /* adjust size */
-  width: 120;
+  width: auto;
   margin-right: auto;
 }
 
