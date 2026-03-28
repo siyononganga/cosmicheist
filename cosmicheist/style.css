@@ -73,8 +73,8 @@ header {
   list-style: none;
   flex-wrap: wrap;
   transition: all 0.3s ease;
-  transform: translateY(-10px);
-  opacity: 0;
+  transform: none;
+  opacity: 1;
 }
 
 /* Links */
