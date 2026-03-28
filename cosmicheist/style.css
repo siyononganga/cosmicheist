@@ -83,6 +83,7 @@ header {
   transition: color 0.3s;
   font-size: 16px;
   white-space: nowrap;
+  text-align: center;
 }
 
 .nav-links.active {
@@ -490,6 +491,7 @@ img {
     position: relative;
     display: none;
     width: 100%;
+    align-items: center;
   }
 
   /* Show menu when active */
