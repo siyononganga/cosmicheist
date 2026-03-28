@@ -497,6 +497,14 @@ img {
     display: block;
   }
 
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+    text-align: center;
+
+  }
+
   /* Stack links vertically */
   .nav-links ul {
     display: none;
