@@ -515,6 +515,108 @@ img {
   }
 }
 
+@media (max-width: 601px) and (max-width: 900px) {
+  body {
+    background-image: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+  }
+  /* Blog cards */
+  .blog-post {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  /* Text */
+  .blog-post p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  /* Headings */
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .blog-post h2 {
+    font-size: 20px;
+  }
+
+  /* Search bar */
+  #search {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  /* Navbar layout */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* SHOW burger */
+  .menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  /* fun hover effect */
+  .menu-toggle:hover {
+    transform: scale(1.2);
+  }
+
+  /* Hide menu by default */
+  .nav-links {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+    width: 100%;
+    gap: 15px;
+  }
+
+  /* Show menu when active */
+  .nav-links.active {
+    display: block;
+  }
+
+  /* Stack links vertically */
+  .nav-links ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav-links.active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Fix search container */
+  .search-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+}
+
 @media (max-width:600px) {
   body {
     background-image: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1920&q=80");
@@ -559,7 +661,7 @@ img {
 
   /* SHOW burger */
   .menu-toggle {
-    display: block;
+    display: none;
     font-size: 26px;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -573,7 +675,7 @@ img {
   /* Hide menu by default */
   .nav-links {
     position: relative;
-    display: none;
+    display: flex;
     width: 100%;
   }
 
