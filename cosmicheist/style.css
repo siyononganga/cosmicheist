@@ -95,7 +95,7 @@ header {
 }
 
 .logo img {
-  height: auto; /* adjust size */
+  height: 40px; /* adjust size */
   width: 100px;
 }
 
