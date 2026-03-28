@@ -34,7 +34,7 @@ header {
 }
 /* NAVBAR */
 .navbar {
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   position: sticky;
   top: 0;
 
@@ -53,6 +53,8 @@ header {
 /* Fix nav links layout */
 .nav-links ul {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   list-style: none;
   gap: 20px;
   margin: 0;
@@ -67,8 +69,10 @@ header {
 .nav-links {
   max-width: 100%;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   list-style: none;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /* Links */
