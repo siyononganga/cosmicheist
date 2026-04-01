@@ -206,14 +206,21 @@ header {
 
 /* 📦 Blog card */
 .blog-post {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   max-width: 700px;
   margin: auto;
+  height: 100%;
+  padding: 15px;
+  border-radius: 12px;
 }
 
 /* 📝 Paragraph spacing */
 .blog-post p {
   margin-bottom: 15px;
   line-height: 1.6;
+  flex-grow: 1;
 }
 
 /* 🖼 Images */
@@ -257,6 +264,7 @@ img {
 }
 
 .blog-post h2 {
+  min-height: 50px;
   margin-bottom: 15px;
 }
 
