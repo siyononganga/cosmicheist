@@ -155,12 +155,12 @@ const posts = [
   },
 
   {
-    title: "Is Space-Time an Illusion?",
+    title: "What if Reality is Just Reflections?",
     description:
-      "New ideas suggesting space and time may emerge from quantum information.",
-    link: "posts/is-spacetime-an-illusion.html",
-    date: "2026-03-05",
-    category: "Astronomy",
+      "What if the Big Bang wasn't an explosion...but a break in an infinite system of reflections",
+    link: "posts/space-time_2.html",
+    date: "2026-04-01",
+    category: "Cosmology",
   },
 ];
 
