@@ -305,9 +305,9 @@ img {
 
   padding: 20px;
 
-  background: rgba(255, 255, 255, 0.075);
+  background: rgba(255, 255, 255, 0.15);
 
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
 
   border-radius: 12px;
 
