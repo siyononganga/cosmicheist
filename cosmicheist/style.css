@@ -307,7 +307,7 @@ img {
 
   background: rgba(255, 255, 255, 0.075);
 
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px);
 
   border-radius: 12px;
 
