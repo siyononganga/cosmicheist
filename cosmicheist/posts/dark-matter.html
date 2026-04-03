@@ -4,17 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A different way to look at Dark Matter| CosmicHeist</title>
 
-    <h1>A Different Way To Look At Dark Matter</h1>
-
-    <p class="article-meta">
-      <span id="article-date">March 22, 2026</span>
-      <span id=" reading-time"></span>
-    </p>
-
     <link rel="stylesheet" href="../style.css" />
   </head>
 
   <body>
+    <h1>A Different Way To Look At Dark Matter</h1>
+
+    <p class="article-meta">
+      <span id="article-date">March 22, 2026</span>
+      <span id="reading-time"></span>
+    </p>
 
     <canvas id="starfield"></canvas>
     <div id="progress-bar"></div>
@@ -189,9 +188,11 @@
 
         const readingTime = Math.ceil(words / 200);
 
-        document.getElementById("reading-time").innerText =
-          readingTime + " min read";
+        const el = document.getElementById("reading-time");
+        if (el) {
+          el.innerText = readingTime + " min read";
       }
+    }
     </script>
 
     <script>
