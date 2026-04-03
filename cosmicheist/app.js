@@ -317,6 +317,21 @@ menuToggle.addEventListener("click", () => {
   }
 });
 
+const article = document.getElementById("article-content");
+
+  if (article) {
+    const text = article.innerText;
+
+    const words = text.trim().split(/\s+/).length;
+
+    const readingTime = Math.ceil(words / 200);
+
+    const el = document.getElementById("reading-time");
+    if (el) {
+      el.innerText = readingTime + " min read";
+  }
+}
+
 // 🔗 Close when link clicked
 const navItems = document.querySelectorAll(".nav-links a");
 
