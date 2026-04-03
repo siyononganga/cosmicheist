@@ -302,6 +302,22 @@ window.addEventListener("scroll", () => {
 
   document.getElementById("progress-bar").style.width = scrollPercent + "%";
 });
+
+const article = document.getElementById("article-content");
+
+if (article) {
+  const text = article.innerText;
+
+  const words = text.trim().split(/\s+/).length;
+
+  const readingTime = Math.ceil(words / 200);
+
+  const el = document.getElementById("reading-time");
+  if (el) {
+    el.innerText = readingTime + " min read";
+}
+}
+
 // 🍔 Get elements
 const menuToggle = document.getElementById("menu-toggle");
 const navContainer = document.getElementById("nav-links");
@@ -316,21 +332,6 @@ menuToggle.addEventListener("click", () => {
     menuToggle.textContent = "🍔";
   }
 });
-
-const article = document.getElementById("article-content");
-
-  if (article) {
-    const text = article.innerText;
-
-    const words = text.trim().split(/\s+/).length;
-
-    const readingTime = Math.ceil(words / 200);
-
-    const el = document.getElementById("reading-time");
-    if (el) {
-      el.innerText = readingTime + " min read";
-  }
-}
 
 // 🔗 Close when link clicked
 const navItems = document.querySelectorAll(".nav-links a");
