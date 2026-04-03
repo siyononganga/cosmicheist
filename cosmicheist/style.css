@@ -96,8 +96,8 @@ header {
 }
 
 .logo img {
-  height: 40px; /* adjust size */
-  width: 120px;
+  height: 60px; /* adjust size */
+  width: 150px;
   margin-right: auto;
 }
 
@@ -213,11 +213,11 @@ header {
   flex-grow: 1;
 }
 
-/* 🖼 Images */
+/* 🖼 Images
 img {
   max-width: 100%;
   height: auto;
-}
+}*/
 
 .blog-post {
   background: rgba(255, 255, 255, 0.3);
