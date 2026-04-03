@@ -4,18 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Crystal Singularity Hypothesis| CosmicHeist</title>
 
-    <h1>What Happened Before the Big Bang?</h1>
-
-    <p class="article-meta">
-      <span id="article-date">March 15, 2026</span>
-      <span id=" reading-time"></span>
-    </p>
-
     <link rel="stylesheet" href="../style.css" />
   </head>
 
   <body>
-
+    <h1>What Happened Before the Big Bang?</h1>
+    
+    <p class="article-meta">
+      <span id="article-date">March 15, 2026</span>
+      <span id=" reading-time"></span>
+    </p>
+    
     <canvas id="starfield"></canvas>
     <div id="progress-bar"></div>
 
@@ -178,57 +177,6 @@
         <a id="next-article"></a>
       </div>
     </main>
-
-    <script>
-      const article = document.getElementById("article-content");
-
-      if (article) {
-        const text = article.innerText;
-
-        const words = text.trim().split(/\s+/).length;
-
-        const readingTime = Math.ceil(words / 200);
-
-        document.getElementById("reading-time").innerText =
-          readingTime + " min read";
-      }
-    </script>
-
-    <script>
-      const posts = [
-        {
-          title: "Reality as Reflection: Rethinking the Singularity",
-          link: "space-time_2.html",
-        },
-
-        {
-          title: "What Happened Before the Big Bang?",
-          link: "the-big-bang.html",
-        },
-
-        {
-          title: "What If Dark Matter Isn't a What, But a Who?",
-          link: "dark-matter.html",
-        },
-      ];
-
-      const currentPage = window.location.pathname.split("/").pop();
-
-      let index = posts.findIndex((p) => p.link === currentPage);
-
-      const prev = document.getElementById("prev-article");
-      const next = document.getElementById("next-article");
-
-      if (index > 0) {
-        prev.href = posts[index - 1].link;
-        prev.innerText = "← " + posts[index - 1].title;
-      }
-
-      if (index < posts.length - 1) {
-        next.href = posts[index + 1].link;
-        next.innerText = posts[index + 1].title + " →";
-      }
-    </script>
 
     <!-- Link to your JS -->
     <script src="../app.js"></script>
