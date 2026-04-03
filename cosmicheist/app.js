@@ -148,20 +148,20 @@ if (canvas) {
 
 const posts = [
   {
-    title: "What If Dark Matter Isn't a What, But a Who?",
-    description: "Could we be asking the wrong questions about Dark Matter?",
-    link: "posts/dark-matter.html",
-    date: "2026-03-22",
-    category: "Cosmology",
-  },
-
-  {
     title: "What Happened Before the Big Bang?",
     description: "Exploring theories about the universe before time began.",
     link: "posts/the-big-bang.html",
     date: "2026-03-15",
     category: "Cosmology",
     featured: true,
+  },
+  
+  {
+    title: "What If Dark Matter Isn't a What, But a Who?",
+    description: "Could we be asking the wrong questions about Dark Matter?",
+    link: "posts/dark-matter.html",
+    date: "2026-03-22",
+    category: "Cosmology",
   },
 
   {
@@ -206,7 +206,6 @@ if (container) {
 
     container.appendChild(card);
   });
-}
 
 const article = document.getElementById("article-content");
 
@@ -238,6 +237,7 @@ const currentPage = window.location.pathname.split("/").pop();
   if (index < posts.length - 1) {
     next.href = posts[index + 1].link;
     next.innerText = posts[index + 1].title + " →";
+}
 }
 
 const filterButtons = document.querySelectorAll(".category-filter button");
