@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://siyononganga.github.io/cosmicheist/sitemap.xml
