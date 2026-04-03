@@ -206,7 +206,39 @@ if (container) {
 
     container.appendChild(card);
   });
-} 
+}
+
+const article = document.getElementById("article-content");
+
+  if (article) {
+    const text = article.innerText;
+
+    const words = text.trim().split(/\s+/).length;
+
+    const readingTime = Math.ceil(words / 200);
+
+    const el = document.getElementById("reading-time");
+    if (el) {
+      el.innerText = readingTime + " min read";
+  }
+}
+
+const currentPage = window.location.pathname.split("/").pop();
+
+  let index = posts.findIndex((p) => p.link === currentPage);
+
+  const prev = document.getElementById("prev-article");
+  const next = document.getElementById("next-article");
+
+  if (index > 0) {
+    prev.href = posts[index - 1].link;
+    prev.innerText = "← " + posts[index - 1].title;
+  }
+
+  if (index < posts.length - 1) {
+    next.href = posts[index + 1].link;
+    next.innerText = posts[index + 1].title + " →";
+}
 
 const filterButtons = document.querySelectorAll(".category-filter button");
 
@@ -302,21 +334,6 @@ window.addEventListener("scroll", () => {
 
   document.getElementById("progress-bar").style.width = scrollPercent + "%";
 });
-
-const article = document.getElementById("article-content");
-
-if (article) {
-  const text = article.innerText;
-
-  const words = text.trim().split(/\s+/).length;
-
-  const readingTime = Math.ceil(words / 200);
-
-  const el = document.getElementById("reading-time");
-  if (el) {
-    el.innerText = readingTime + " min read";
-}
-}
 
 // 🍔 Get elements
 const menuToggle = document.getElementById("menu-toggle");
