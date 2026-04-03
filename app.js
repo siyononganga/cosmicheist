@@ -168,7 +168,7 @@ const posts = [
     title: "What if Reality is Just Reflections?",
     description:
       "What if the Big Bang wasn't an explosion...but a break in an infinite system of reflections",
-    link: "posts/space-time_2.html",
+    link: "posts/space-time.html",
     date: "2026-04-01",
     category: "Cosmology",
   },
@@ -238,7 +238,7 @@ const navposts = [
 
   {
     title: "Reality as Reflection: Rethinking the Singularity",
-    link: "space-time_2.html",
+    link: "space-time.html",
   },
 ];
 
