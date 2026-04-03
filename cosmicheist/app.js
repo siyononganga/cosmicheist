@@ -144,7 +144,7 @@ if (canvas) {
   // 🚀 Initialize + start animation
   initStars();
   animateStars();
-} 
+}
 
 const posts = [
   {
@@ -178,6 +178,7 @@ posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
 const featuredContainer = document.getElementById("featured-post");
 
+if (featuredContainer) {
 posts.forEach((post) => {
   if (post.featured) {
     featuredContainer.innerHTML = `
@@ -187,6 +188,7 @@ posts.forEach((post) => {
 `;
   }
 });
+}
 
 const container = document.getElementById("blog-container");
 
@@ -223,22 +225,39 @@ const article = document.getElementById("article-content");
   }
 }
 
+const navposts = [
+  {
+    title: "What Happened Before the Big Bang?",
+    link: "the-big-bang.html",
+  },
+
+  {
+    title: "What If Dark Matter Isn't a What, Buy a Who?",
+    link: "dark-matter.html",
+  },
+
+  {
+    title: "Reality as Reflection: Rethinking the Singularity",
+    link: "space-time_2.html",
+  },
+];
+
 const prev = document.getElementById("prev-article");
 const next = document.getElementById("next-article");
 
 if (prev && next) {
   const currentPage = window.location.pathname.split("/").pop();
 
-  let index = posts.findIndex((p) => p.link.includes(currentPage));
+  let index = navposts.findIndex((p) => p.link.includes(currentPage));
 
   if (index > 0) {
-    prev.href = posts[index - 1].link;
-    prev.innerText = "← " + posts[index - 1].title;
+    prev.href = navposts[index - 1].link;
+    prev.innerText = "← " + navposts[index - 1].title;
   }
 
-  if (index < posts.length - 1) {
-    next.href = posts[index + 1].link;
-    next.innerText = posts[index + 1].title + " →";
+  if (index < navposts.length - 1) {
+    next.href = navposts[index + 1].link;
+    next.innerText = navposts[index + 1].title + " →";
   }
 }
 
@@ -278,7 +297,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 const heroText = document.querySelector(".hero-text");
 
 if (heroText) {
-// const navbar = document.querySelector(".navbar"); // sticky navbar
+const navbar = document.querySelector(".navbar"); // sticky navbar
 
 window.addEventListener("scroll", () => {
   // Distance from top of page
