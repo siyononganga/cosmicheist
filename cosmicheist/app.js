@@ -206,6 +206,7 @@ if (container) {
 
     container.appendChild(card);
   });
+}
 
 const article = document.getElementById("article-content");
 
@@ -222,12 +223,13 @@ const article = document.getElementById("article-content");
   }
 }
 
-const currentPage = window.location.pathname.split("/").pop();
+const prev = document.getElementById("prev-article");
+const next = document.getElementById("next-article");
 
-  let index = posts.findIndex((p) => p.link === currentPage);
+if (prev && next) {
+  const currentPage = window.location.pathname.split("/").pop();
 
-  const prev = document.getElementById("prev-article");
-  const next = document.getElementById("next-article");
+  let index = posts.findIndex((p) => p.link.includes(currentPage));
 
   if (index > 0) {
     prev.href = posts[index - 1].link;
@@ -237,7 +239,7 @@ const currentPage = window.location.pathname.split("/").pop();
   if (index < posts.length - 1) {
     next.href = posts[index + 1].link;
     next.innerText = posts[index + 1].title + " →";
-}
+  }
 }
 
 const filterButtons = document.querySelectorAll(".category-filter button");
