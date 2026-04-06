@@ -28,7 +28,7 @@ if (searchInput) {
       }
     });
   });
-} 
+}
 const canvas = document.getElementById("starfield");
 
 if (canvas) {
@@ -102,12 +102,7 @@ if (canvas) {
       const tailX = star.x - (star.vx * star.length) / 10;
       const tailY = star.y - (star.vy * star.length) / 10;
 
-      const gradient = ctx.createLinearGradient(
-        star.x,
-        star.y,
-        tailX,
-        tailY
-      );
+      const gradient = ctx.createLinearGradient(star.x, star.y, tailX, tailY);
       gradient.addColorStop(0, "white");
       gradient.addColorStop(1, "transparent");
 
@@ -155,7 +150,7 @@ const posts = [
     category: "Cosmology",
     featured: true,
   },
-  
+
   {
     title: "What If Dark Matter Isn't a What, But a Who?",
     description: "Could we be asking the wrong questions about Dark Matter?",
@@ -179,15 +174,15 @@ posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 const featuredContainer = document.getElementById("featured-post");
 
 if (featuredContainer) {
-posts.forEach((post) => {
-  if (post.featured) {
-    featuredContainer.innerHTML = `
+  posts.forEach((post) => {
+    if (post.featured) {
+      featuredContainer.innerHTML = `
 <h2>${post.title}</h2>
 <p>${post.description}</p>
 <a href="${post.link}">Read full article →</a>
 `;
-  }
-});
+    }
+  });
 }
 
 const container = document.getElementById("blog-container");
@@ -212,16 +207,16 @@ if (container) {
 
 const article = document.getElementById("article-content");
 
-  if (article) {
-    const text = article.innerText;
+if (article) {
+  const text = article.innerText;
 
-    const words = text.trim().split(/\s+/).length;
+  const words = text.trim().split(/\s+/).length;
 
-    const readingTime = Math.ceil(words / 200);
+  const readingTime = Math.ceil(words / 200);
 
-    const el = document.getElementById("reading-time");
-    if (el) {
-      el.innerText = readingTime + " min read";
+  const el = document.getElementById("reading-time");
+  if (el) {
+    el.innerText = readingTime + " min read";
   }
 }
 
@@ -297,29 +292,28 @@ hiddenElements.forEach((el) => observer.observe(el));
 const heroText = document.querySelector(".hero-text");
 
 if (heroText) {
-const navbar = document.querySelector(".navbar"); // sticky navbar
+  const navbar = document.querySelector(".navbar"); // sticky navbar
 
-window.addEventListener("scroll", () => {
-  // Distance from top of page
-  const scrollY = window.scrollY;
+  window.addEventListener("scroll", () => {
+    // Distance from top of page
+    const scrollY = window.scrollY;
 
-  // Get navbar height
-  const navHeight = navbar.offsetHeight;
+    // Get navbar height
+    const navHeight = navbar.offsetHeight;
 
-  // Fade starts when text reaches navbar, ends when it's fully under
-  const fadeStart = navHeight; // start fading when scrolling past navbar
-  const fadeEnd = navHeight + 150; // fully faded after 150px
+    // Fade starts when text reaches navbar, ends when it's fully under
+    const fadeStart = navHeight; // start fading when scrolling past navbar
+    const fadeEnd = navHeight + 150; // fully faded after 150px
 
-  let opacity = 1;
+    let opacity = 1;
 
-  if (scrollY > fadeStart) {
-    opacity = Math.max(1 - (scrollY - fadeStart) / (fadeEnd - fadeStart), 0);
-  }
+    if (scrollY > fadeStart) {
+      opacity = Math.max(1 - (scrollY - fadeStart) / (fadeEnd - fadeStart), 0);
+    }
 
-  heroText.style.opacity = opacity;
-});
+    heroText.style.opacity = opacity;
+  });
 }
-
 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navbar a");
