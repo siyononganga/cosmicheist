@@ -194,7 +194,7 @@ header {
 
 .latest-content a {
   font-size: 18px;
-
+  color: white;
 }
 
 /* BLOG GRID */
@@ -551,6 +551,7 @@ img {
   .navbar {
     flex-wrap: wrap;
     padding: 8px 12px;
+    min-height: 70px; 
   }
 
   .nav-links {
@@ -581,7 +582,7 @@ img {
 
   .navbar .logo img {
     height: 35px;
-    width: 60px;
+    width: 80px;
   }
 
   .menu-toggle {
