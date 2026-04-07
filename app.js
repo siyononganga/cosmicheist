@@ -388,7 +388,7 @@ document.addEventListener("click", (e) => {
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
-  const offset = scrollY * 0.3;
+  const offset = scrollY * 1;
 
   // Adjust speed here (0.3 = slow, 0.6 = faster)
 
