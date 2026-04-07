@@ -503,6 +503,25 @@ img {
     transition: transform 0.3s ease;
   }
 
+  a, button, .menu-toggle {
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+  }
+
+  .logo img, .menu-toggle{
+    transition: transform 0.15s ease out;
+  }
+
+  .logo img:hover, .menu-toggle {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px #6cf)
+  }
+
+  .logo img:active, .menu-toggle:active {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 12px #6cf);
+  }
+
   /* fun hover effect */
   .menu-toggle:hover {
     transform: scale(1.2);
