@@ -530,3 +530,53 @@ img {
     gap: 15px;
   }
 }
+
+/* ===== MOBILE LANDSCAPE FIX ===== */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+
+  .navbar {
+    flex-wrap: wrap;
+    padding: 8px 12px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .search-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .search-bar input {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .navbar .logo img {
+    height: 35px;
+    width: auto;
+  }
+
+  .menu-toggle {
+    font-size: 22px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+  }
+} 
