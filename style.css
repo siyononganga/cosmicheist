@@ -183,6 +183,20 @@ header {
   font-weight: bold;
 }
 
+.latest {
+    padding: 5px 10%;
+}
+
+.latest-content h2 {
+  font-size: 36px;
+
+}
+
+.latest-content a {
+  font-size: 18px;
+
+}
+
 /* BLOG GRID */
 
 .blog-grid {
@@ -567,7 +581,7 @@ img {
 
   .navbar .logo img {
     height: 35px;
-    width: 40px;
+    width: 60px;
   }
 
   .menu-toggle {
