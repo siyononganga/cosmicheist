@@ -101,6 +101,17 @@ header {
   height: 40px; /* adjust size */
   width: 200px;
   margin-right: auto;
+  transition: transform 0.15s ease out;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px #6cf)
+}
+
+.logo img:active {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 12px #6cf);
 }
 
 .nav-links a:hover {
