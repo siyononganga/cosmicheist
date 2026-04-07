@@ -500,7 +500,7 @@ img {
     display: block;
     font-size: 26px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    /*transition: transform 0.3s ease;*/
   }
 
   a, button, .menu-toggle {
@@ -579,7 +579,7 @@ img {
   .navbar {
     flex-wrap: wrap;
     padding: 8px 12px;
-    min-height: 70px; 
+    min-height: 50px; 
   }
 
   .nav-links {
