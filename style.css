@@ -611,6 +611,17 @@ img {
   .navbar .logo img {
     height: 35px;
     width: 100px;
+    transition: transform 0.15s ease out;
+  }
+
+  .navbar logo img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px #6cf)
+  }
+
+  .navbar logo img:active {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 12px #6cf);
   }
 
   .menu-toggle {
@@ -622,4 +633,3 @@ img {
     padding: 10px;
     text-align: center;
   }
-} 
