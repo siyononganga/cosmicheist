@@ -390,6 +390,7 @@ window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
   const offset = scrollY * 0.6;
 
-  const bg = document.querySelector("body");
-  bg.style.transform = `translateY(${offset}px)`;
+  // Adjust speed here (0.3 = slow, 0.6 = faster)
+
+  document.body.style.backgroundPositionY = `center ${offset}px`;
 });
