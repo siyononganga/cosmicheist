@@ -390,6 +390,6 @@ window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
   const offset = scrollY * 0.6;
 
-  const bg = document.querySelector(".bg");
+  const bg = document.querySelector("body");
   bg.style.transform = `translateY(${offset}px)`;
 });

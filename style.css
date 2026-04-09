@@ -5,20 +5,18 @@
   box-sizing: border-box;
 }
 
-.bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120%; /* IMPORTANT: bigger than screen */
-  background: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1920&q=80") center / cover no-repeat;
-  z-index: -1;
-}
-  
 /* BODY */
+
 body {
   font-family: Arial, sans-serif;
+  /*line-height: 1.6;*/
   color: white;
+  background-image: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /*position: relative;*/
 }
 
 header {
