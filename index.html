@@ -1,119 +1,137 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CosmicHeist</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Link to your CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+  <title>CosmicHeist</title>
 
-    <!-- SEO meta -->
-    <meta
-      name="description"
-      content="CosmicHeist — Breaking the secrets of the Universe. Exploring physics, astronomy, and cosmology."
-    />
-  </head>
+  <!-- SEO -->
+  <meta name="description" content="CosmicHeist — Breaking the secrets of the Universe. Exploring physics, astronomy, and cosmology." />
+  <meta name="theme-color" content="#000000" />
 
-  <body>
-    <canvas id="starfield"></canvas>
+  <!-- Favicon (add later if you want) -->
+  <!-- <link rel="icon" href="images/favicon.ico" /> -->
 
-    <!-- Header / Navigation -->
-    <header class="navbar">
-      <div class="logo">
-        <a href="index.html">
-          <img src="images/logo-4.png" alt="CosmicHeist Logo" />
-        </a>
-      </div>
-      <div class="menu-toggle" id="menu-toggle">🍔</div>
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 
-      <nav class="nav-links" id="nav-links">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </nav>
-      <div class="search-bar">
-        <input type="text" id="search" placeholder="Search posts..." />
-      </div>
-    </header>
+  <!-- Font Awesome (fixed link) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="hero-text">
-        <h2>Breaking the secrets of the Universe</h2>
-        <p>
-          Welcome to CosmicHeist — exploring physics, quantum mechanics, astronomy, and
-          the deep structure of reality.
-        </p>
-      </div>
-    </section>
-    <section class="latest" id="latest">
-      <h2>Latest Articles</h2>
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" href="sitemap.xml" />
+</head>
+
+<body>
+
+  <!-- Starfield Canvas -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo-4.png" alt="CosmicHeist Logo" loading="lazy" />
+      </a>
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="nav-links">
       <ul>
-        <li><a href="posts/fifth-dimension.html">Introducing The Fifth Dimension</a></li>
-        <li><a href="posts/space-time.html">Space-Time Breakdown</a></li>
-        <li><a href="posts/dark-matter.html">Dark Matter Explained</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
       </ul>
-    </section>
+    </nav>
 
-    <section class="featured" id="featured">
-      <div class="featured-content" id="featured-post"></div>
-    </section>
-    <section class="category">
-      <div class="category-filter">
-        <button data-category="all">All</button>
-        <button data-category="Physics">Physics</button>
-        <button data-category="Cosmology">Cosmology</button>
-        <button data-category="Astronomy">Astronomy</button>
-      </div>
-    </section>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search posts..." aria-label="Search posts" />
+    </div>
+  </header>
 
-    <!-- Main Content / Blog Posts -->
-    <main>
-      <section class="blog-grid" id="blog-container"></section>
-    </main>
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h1>Breaking the secrets of the Universe</h1>
+      <p>
+        Welcome to CosmicHeist — exploring physics, quantum mechanics,
+        astronomy, and the deep structure of reality.
+      </p>
+    </div>
+  </section>
 
-    <!-- Link to your JS -->
-    <script src="app.js"></script>
+  <!-- Latest -->
+  <section class="latest" id="latest">
+    <h2>Latest Articles</h2>
+    <ul>
+      <li><a href="posts/fifth-dimension.html">Introducing The Fifth Dimension</a></li>
+      <li><a href="posts/space-time.html">Space-Time Breakdown</a></li>
+      <li><a href="posts/dark-matter.html">Dark Matter Explained</a></li>
+    </ul>
+  </section>
 
-    <footer class="site-footer">
-      <p>© 2026 CosmicHeist</p>
+  <!-- Featured -->
+  <section class="featured" id="featured">
+    <div class="featured-content" id="featured-post"></div>
+  </section>
 
-      <div class="footer-links">
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy Policy</a>
-      </div>
-      <div class="social-icons">
+  <!-- Categories -->
+  <section class="category">
+    <div class="category-filter">
+      <button data-category="all">All</button>
+      <button data-category="Physics">Physics</button>
+      <button data-category="Cosmology">Cosmology</button>
+      <button data-category="Astronomy">Astronomy</button>
+    </div>
+  </section>
 
+  <!-- Blog Content -->
+  <main>
+    <section class="blog-grid" id="blog-container"></section>
+  </main>
 
-        <a href="https://www.pinterest.com/" target="_blank"
-          ><i class="fab fa-pinterest"></i
-        ></a>
-        <a href="https://www.instagram.com/cosmicheistblog" target="_blank"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a href="https://x.com/CosmicHeist" target="_blank"
-          ><i class="fab fa-x-twitter"></i
-        ></a>
-        <a href="https://www.facebook.com/CosmicHeist" target="_blank"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-        <a href="https://youtube.com/" target="_blank"
-          ><i class="fab fa-youtube"></i
-        ></a>
-        <a href="https://www.reddit.com/" target="_blank"
-          ><i class="fab fa-reddit"></i
-        ></a>
-      </div>
-    </footer>
-  </body>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2026 CosmicHeist</p>
+
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-pinterest"></i>
+      </a>
+      <a href="https://www.instagram.com/cosmicheistblog" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://x.com/CosmicHeist" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="https://www.facebook.com/CosmicHeist" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.reddit.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-reddit"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="app.js" defer></script>
+
+</body>
 </html>
