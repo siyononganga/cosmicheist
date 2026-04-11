@@ -161,7 +161,7 @@ const posts = [
   {
     title: "What if Reality is Just Reflections?",
     description:
-      "What if the Big Bang wasn't an explosion...but a break in an infinite system of reflections",
+      "What if the Big Bang wasn't an explosion...but a break in an infinite system of reflections?",
     link: "posts/space-time.html",
     date: "2026-04-01",
     category: "Cosmology",
@@ -169,7 +169,7 @@ const posts = [
 
   {
     title: "The Fifth Dimension: A World Where Time Dominates Space",
-    description: "Could there be a world where the roles of time and space are reversed",
+    description: "Could there be a world where the roles of time and space are reversed?",
     link: "posts/fifth-dimension.html",
     date: "2026-04-11",
     category: "Cosmology",
