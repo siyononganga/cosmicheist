@@ -209,11 +209,13 @@ if (container) {
     card.setAttribute("data-category", post.category);
 
     card.innerHTML = `
+    <a href="${post.link}" class="card-link">
       <h2>${post.title}</h2>
       <p class="post-date">${post.date}</p>
       <p class="post-category">${post.category}</p>
       <p>${post.description}</p>
-      <a href="${post.link}">Read more →</a>
+      <span class="read-more">Read more →</span>
+    </a>
     `;
 
     container.appendChild(card);
