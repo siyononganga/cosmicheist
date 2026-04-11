@@ -332,13 +332,13 @@ if (heroText) {
     }
 
     heroText.style.opacity = opacity;
-  });
+  }));
 }
 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navbar a");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", debounce(() => {
   const scrollY = window.scrollY;
   let current = "";
 
@@ -357,7 +357,7 @@ window.addEventListener("scroll", () => {
       link.classList.add("active");
     }
   });
-});
+}));
 
 window.addEventListener("scroll", debounce(() => {
   const scrollTop = document.documentElement.scrollTop;
@@ -368,7 +368,7 @@ window.addEventListener("scroll", debounce(() => {
   const scrollPercent = (scrollTop / scrollHeight) * 100;
 
   document.getElementById("progress-bar").style.width = scrollPercent + "%";
-});
+}));
 
 // Get elements
 const menuToggle = document.getElementById("menu-toggle");
@@ -403,4 +403,4 @@ window.addEventListener("scroll", debounce(() => {
   // Adjust speed here (0.3 = slow, 0.6 = faster)
 
   document.body.style.backgroundPositionY = `center ${offset}px`;
-});
+}));
