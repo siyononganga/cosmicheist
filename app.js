@@ -148,7 +148,6 @@ const posts = [
     link: "posts/the-big-bang.html",
     date: "2026-03-15",
     category: "Cosmology",
-    featured: true,
   },
 
   {
@@ -174,6 +173,7 @@ const posts = [
     link: "posts/fifth-dimension.html",
     date: "2026-04-11",
     category: "Cosmology",
+    featured: true,
   },
 ];
 
