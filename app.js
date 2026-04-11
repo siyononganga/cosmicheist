@@ -34,111 +34,110 @@ const canvas = document.getElementById("starfield");
 if (canvas) {
   const ctx = canvas.getContext("2d");
 
-  // 🖥️ Set canvas size
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  function resizeCanvas() {
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = window.innerWidth * dpr;
+    canvas.height = window.innerHeight * dpr;
+    canvas.style.width = window.innerWidth + "px";
+    canvas.style.height = window.innerHeight + "px";
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  resizeCanvas();
 
   let stars = [];
   let shootingStars = [];
 
-  // ⭐ Create stars
+  const STAR_LAYERS = 3;
+
   function initStars() {
     stars = [];
-    for (let i = 0; i < 300; i++) {
-      let depth = Math.random();
-      stars.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        radius: depth * 2,
-        speed: depth * 0.8,
-        color: `hsl(${Math.random() * 360}, 80%, 70%)`,
-      });
+
+    for (let layer = 0; layer < STAR_LAYERS; layer++) {
+      for (let i = 0; i < 100; i++) {
+        stars.push({
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          radius: Math.random() * (layer + 1),
+          speed: (layer + 1) * 0.3,
+          opacity: Math.random(),
+        });
+      }
     }
   }
 
-  // 🌠 Create shooting star
   function createShootingStar() {
-    const angle = (Math.random() * Math.PI) / 3 + Math.PI / 6;
-    const speed = Math.random() * 20 + 20;
-
     shootingStars.push({
-      x: Math.random() * canvas.width,
-      y: 0,
-      length: Math.random() * 120 + 40,
-      vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed,
-      life: 120,
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight * 0.5,
+      vx: Math.random() * 10 + 10,
+      vy: Math.random() * 5 + 5,
+      length: Math.random() * 80 + 40,
+      life: 80,
     });
   }
 
-  // 🎬 Animation loop
-  function animateStars() {
+  function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // ⭐ Draw stars
+    // ⭐ Stars
     stars.forEach((star) => {
+      ctx.globalAlpha = star.opacity;
       ctx.beginPath();
       ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-      ctx.fillStyle = star.color;
+      ctx.fillStyle = "white";
       ctx.fill();
 
-      // Move star
       star.y += star.speed;
 
-      // Reset when off screen
-      if (star.y > canvas.height) {
+      if (star.y > window.innerHeight) {
         star.y = 0;
-        star.x = Math.random() * canvas.width;
+        star.x = Math.random() * window.innerWidth;
       }
     });
 
-    // 🌠 Random shooting star
-    if (Math.random() < 0.0005) {
+    ctx.globalAlpha = 1;
+
+    // 🌠 Shooting stars (more frequent now)
+    if (Math.random() < 0.005) {
       createShootingStar();
     }
 
-    // 🌠 Draw shooting stars
-    shootingStars.forEach((star, index) => {
-      const tailX = star.x - (star.vx * star.length) / 10;
-      const tailY = star.y - (star.vy * star.length) / 10;
+    shootingStars.forEach((s, i) => {
+      const tailX = s.x - s.vx * 2;
+      const tailY = s.y - s.vy * 2;
 
-      const gradient = ctx.createLinearGradient(star.x, star.y, tailX, tailY);
+      const gradient = ctx.createLinearGradient(s.x, s.y, tailX, tailY);
       gradient.addColorStop(0, "white");
       gradient.addColorStop(1, "transparent");
 
-      ctx.beginPath();
-      ctx.moveTo(star.x, star.y);
-      ctx.lineTo(tailX, tailY);
       ctx.strokeStyle = gradient;
-      ctx.lineWidth = 3;
-      ctx.shadowBlur = 15;
-      ctx.shadowColor = "white";
+      ctx.lineWidth = 2;
+
+      ctx.beginPath();
+      ctx.moveTo(s.x, s.y);
+      ctx.lineTo(tailX, tailY);
       ctx.stroke();
 
-      // Move shooting star
-      star.x += star.vx;
-      star.y += star.vy;
-      star.life--;
+      s.x += s.vx;
+      s.y += s.vy;
+      s.life--;
 
-      // Remove when dead
-      if (star.life <= 0) {
-        shootingStars.splice(index, 1);
+      if (s.life <= 0) {
+        shootingStars.splice(i, 1);
       }
     });
 
-    requestAnimationFrame(animateStars);
+    requestAnimationFrame(animate);
   }
 
-  // 🔄 Resize handling
   window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    initStars(); // re-generate stars
+    resizeCanvas();
+    initStars();
   });
 
-  // 🚀 Initialize + start animation
   initStars();
-  animateStars();
+  animate();
 }
 
 const posts = [
