@@ -1,3 +1,11 @@
+function debounce(func, wait = 10) {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
+
 const searchInput = document.getElementById("search");
 
 if (searchInput) {
@@ -80,7 +88,7 @@ if (canvas) {
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // ⭐ Stars
+    // Stars
     stars.forEach((star) => {
       ctx.globalAlpha = star.opacity;
       ctx.beginPath();
@@ -98,7 +106,7 @@ if (canvas) {
 
     ctx.globalAlpha = 1;
 
-    // 🌠 Shooting stars (more frequent now)
+    // Shooting stars (more frequent now)
     if (Math.random() < 0.005) {
       createShootingStar();
     }
@@ -306,7 +314,7 @@ const heroText = document.querySelector(".hero-text");
 if (heroText) {
   const navbar = document.querySelector(".navbar"); // sticky navbar
 
-  window.addEventListener("scroll", () => {
+  window.addEventListener("scroll", debounce(() => {
     // Distance from top of page
     const scrollY = window.scrollY;
 
@@ -351,7 +359,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", debounce(() => {
   const scrollTop = document.documentElement.scrollTop;
   const scrollHeight =
     document.documentElement.scrollHeight -
@@ -362,7 +370,7 @@ window.addEventListener("scroll", () => {
   document.getElementById("progress-bar").style.width = scrollPercent + "%";
 });
 
-// 🍔 Get elements
+// Get elements
 const menuToggle = document.getElementById("menu-toggle");
 const navContainer = document.getElementById("nav-links");
 
@@ -388,7 +396,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", debounce(() => {
   const scrollY = window.scrollY;
   const offset = scrollY * 0.6;
 
