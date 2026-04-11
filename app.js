@@ -366,35 +366,25 @@ window.addEventListener("scroll", () => {
 const menuToggle = document.getElementById("menu-toggle");
 const navContainer = document.getElementById("nav-links");
 
-// 🍔 Toggle menu
 menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
   navContainer.classList.toggle("active");
-
-  if (navContainer.classList.contains("active")) {
-    menuToggle.textContent = "❌";
-  } else {
-    menuToggle.textContent = "🍔";
-  }
 });
 
-// 🔗 Close when link clicked
-const navItems = document.querySelectorAll(".nav-links a");
-
-navItems.forEach((link) => {
+document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
+    menuToggle.classList.remove("active");
     navContainer.classList.remove("active");
-    menuToggle.textContent = "🍔";
   });
 });
 
-// 🧠 Close when clicking outside
 document.addEventListener("click", (e) => {
-  const isClickInside =
-    navContainer.contains(e.target) || menuToggle.contains(e.target);
-
-  if (!isClickInside) {
+  if (
+    !navContainer.contains(e.target) &&
+    !menuToggle.contains(e.target)
+  ) {
+    menuToggle.classList.remove("active");
     navContainer.classList.remove("active");
-    menuToggle.textContent = "🍔";
   }
 });
 
