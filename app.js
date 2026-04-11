@@ -167,6 +167,14 @@ const posts = [
     date: "2026-04-01",
     category: "Cosmology",
   },
+
+  {
+    title: "The Fifth Dimension: A World Where Time Dominates Space",
+    description: "Could there be a world where the roles of time and space are reversed",
+    link: "posts/fifth-dimension.html",
+    date: "2026-04-11",
+    category: "Cosmology",
+  },
 ];
 
 posts.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -234,6 +242,11 @@ const navposts = [
   {
     title: "Reality as Reflection: Rethinking the Singularity",
     link: "space-time.html",
+  },
+
+  {
+    title: "The Fifth Dimension: Space and Time Reversed",
+    link: "fifth-dimension.html",
   },
 ];
 
