@@ -406,3 +406,31 @@ window.addEventListener("scroll", debounce(() => {
 
   document.body.style.backgroundPositionY = `center ${offset}px`;
 }));
+
+// 🚀 Warp-drive navigation effect
+const warpLinks = document.querySelectorAll("a[href]");
+
+warpLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const url = link.getAttribute("href");
+
+    // Ignore external links or anchors
+    if (
+      url.startsWith("http") ||
+      url.startsWith("#") ||
+      link.target === "_blank"
+    ) {
+      return;
+    }
+
+    e.preventDefault();
+
+    // Activate warp effect
+    document.body.classList.add("warping");
+
+    // Delay navigation
+    setTimeout(() => {
+      window.location.href = url;
+    }, 400); // match CSS timing
+  });
+}); 
