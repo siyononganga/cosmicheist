@@ -168,9 +168,9 @@ const posts = [
   },
 
   {
-    title: "The Fifth Dimension: A World Where Time Dominates Space",
+    title: "The Fourth Dimension: A World Where Time Dominates Space",
     description: "Could there be a world where the roles of space and time are reversed?",
-    link: "posts/fifth-dimension.html",
+    link: "posts/fourth-dimension.html",
     date: "2026-04-11",
     category: "Cosmology",
     featured: true,
@@ -245,8 +245,8 @@ const navposts = [
   },
 
   {
-    title: "The Fifth Dimension: Space and Time Reversed",
-    link: "fifth-dimension.html",
+    title: "The Fourth Dimension: Space and Time Reversed",
+    link: "fourth-dimension.html",
   },
 ];
 
