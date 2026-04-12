@@ -1,11 +1,3 @@
-function debounce(func, wait = 10) {
-  let timeout;
-  return (...args) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, args), wait);
-  };
-}
-
 const searchInput = document.getElementById("search");
 
 if (searchInput) {
@@ -42,110 +34,111 @@ const canvas = document.getElementById("starfield");
 if (canvas) {
   const ctx = canvas.getContext("2d");
 
-  function resizeCanvas() {
-    const dpr = window.devicePixelRatio || 1;
-    canvas.width = window.innerWidth * dpr;
-    canvas.height = window.innerHeight * dpr;
-    canvas.style.width = window.innerWidth + "px";
-    canvas.style.height = window.innerHeight + "px";
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  }
-
-  resizeCanvas();
+  // 🖥️ Set canvas size
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
   let stars = [];
   let shootingStars = [];
 
-  const STAR_LAYERS = 3;
-
+  // ⭐ Create stars
   function initStars() {
     stars = [];
-
-    for (let layer = 0; layer < STAR_LAYERS; layer++) {
-      for (let i = 0; i < 100; i++) {
-        stars.push({
-          x: Math.random() * window.innerWidth,
-          y: Math.random() * window.innerHeight,
-          radius: Math.random() * (layer + 1),
-          speed: (layer + 1) * 0.3,
-          opacity: Math.random(),
-        });
-      }
+    for (let i = 0; i < 300; i++) {
+      let depth = Math.random();
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: depth * 2,
+        speed: depth * 0.8,
+        color: `hsl(${Math.random() * 360}, 80%, 70%)`,
+      });
     }
   }
 
+  // 🌠 Create shooting star
   function createShootingStar() {
+    const angle = (Math.random() * Math.PI) / 3 + Math.PI / 6;
+    const speed = Math.random() * 20 + 20;
+
     shootingStars.push({
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight * 0.5,
-      vx: Math.random() * 10 + 10,
-      vy: Math.random() * 5 + 5,
-      length: Math.random() * 80 + 40,
-      life: 80,
+      x: Math.random() * canvas.width,
+      y: 0,
+      length: Math.random() * 120 + 40,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed,
+      life: 120,
     });
   }
 
-  function animate() {
+  // 🎬 Animation loop
+  function animateStars() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Stars
+    // ⭐ Draw stars
     stars.forEach((star) => {
-      ctx.globalAlpha = star.opacity;
       ctx.beginPath();
       ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-      ctx.fillStyle = "white";
+      ctx.fillStyle = star.color;
       ctx.fill();
 
+      // Move star
       star.y += star.speed;
 
-      if (star.y > window.innerHeight) {
+      // Reset when off screen
+      if (star.y > canvas.height) {
         star.y = 0;
-        star.x = Math.random() * window.innerWidth;
+        star.x = Math.random() * canvas.width;
       }
     });
 
-    ctx.globalAlpha = 1;
-
-    // Shooting stars (more frequent now)
-    if (Math.random() < 0.005) {
+    // 🌠 Random shooting star
+    if (Math.random() < 0.0005) {
       createShootingStar();
     }
 
-    shootingStars.forEach((s, i) => {
-      const tailX = s.x - s.vx * 2;
-      const tailY = s.y - s.vy * 2;
+    // 🌠 Draw shooting stars
+    shootingStars.forEach((star, index) => {
+      const tailX = star.x - (star.vx * star.length) / 10;
+      const tailY = star.y - (star.vy * star.length) / 10;
 
-      const gradient = ctx.createLinearGradient(s.x, s.y, tailX, tailY);
+      const gradient = ctx.createLinearGradient(star.x, star.y, tailX, tailY);
       gradient.addColorStop(0, "white");
       gradient.addColorStop(1, "transparent");
 
-      ctx.strokeStyle = gradient;
-      ctx.lineWidth = 2;
-
       ctx.beginPath();
-      ctx.moveTo(s.x, s.y);
+      ctx.moveTo(star.x, star.y);
       ctx.lineTo(tailX, tailY);
+      ctx.strokeStyle = gradient;
+      ctx.lineWidth = 3;
+      ctx.shadowBlur = 15;
+      ctx.shadowColor = "white";
       ctx.stroke();
 
-      s.x += s.vx;
-      s.y += s.vy;
-      s.life--;
+      // Move shooting star
+      star.x += star.vx;
+      star.y += star.vy;
+      star.life--;
 
-      if (s.life <= 0) {
-        shootingStars.splice(i, 1);
+      // Remove when dead
+      if (star.life <= 0) {
+        shootingStars.splice(index, 1);
       }
     });
 
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animateStars);
   }
 
+  // 🔄 Resize handling
   window.addEventListener("resize", () => {
-    resizeCanvas();
-    initStars();
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    initStars(); // re-generate stars
   });
 
+  // 🚀 Initialize + start animation
   initStars();
-  animate();
+  animateStars();
 }
 
 const posts = [
@@ -209,13 +202,11 @@ if (container) {
     card.setAttribute("data-category", post.category);
 
     card.innerHTML = `
-    <a href="${post.link}" class="card-link">
       <h2>${post.title}</h2>
       <p class="post-date">${post.date}</p>
       <p class="post-category">${post.category}</p>
       <p>${post.description}</p>
-      <span class="read-more">Read more →</span>
-    </a>
+      <a href="${post.link}">Read more →</a>
     `;
 
     container.appendChild(card);
@@ -316,7 +307,7 @@ const heroText = document.querySelector(".hero-text");
 if (heroText) {
   const navbar = document.querySelector(".navbar"); // sticky navbar
 
-  window.addEventListener("scroll", debounce(() => {
+  window.addEventListener("scroll", () => {
     // Distance from top of page
     const scrollY = window.scrollY;
 
@@ -334,13 +325,13 @@ if (heroText) {
     }
 
     heroText.style.opacity = opacity;
-  }));
+  });
 }
 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".navbar a");
 
-window.addEventListener("scroll", debounce(() => {
+window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
   let current = "";
 
@@ -359,9 +350,9 @@ window.addEventListener("scroll", debounce(() => {
       link.classList.add("active");
     }
   });
-}));
+});
 
-window.addEventListener("scroll", debounce(() => {
+window.addEventListener("scroll", () => {
   const scrollTop = document.documentElement.scrollTop;
   const scrollHeight =
     document.documentElement.scrollHeight -
@@ -370,67 +361,44 @@ window.addEventListener("scroll", debounce(() => {
   const scrollPercent = (scrollTop / scrollHeight) * 100;
 
   document.getElementById("progress-bar").style.width = scrollPercent + "%";
-}));
+});
 
 // Get elements
 const menuToggle = document.getElementById("menu-toggle");
 const navContainer = document.getElementById("nav-links");
 
+// Toggle menu (clean version)
 menuToggle.addEventListener("click", () => {
-  menuToggle.classList.toggle("active");
   navContainer.classList.toggle("active");
-});
+  menuToggle.classList.toggle("active"); // 👈 triggers animation
+}); 
 
-document.querySelectorAll(".nav-links a").forEach((link) => {
+// Close when link clicked
+const navItems = document.querySelectorAll(".nav-links a");
+
+navItems.forEach((link) => {
   link.addEventListener("click", () => {
-    menuToggle.classList.remove("active");
     navContainer.classList.remove("active");
+    menuToggle.classList.remove("active");
   });
 });
 
+// Close when clicking outside
 document.addEventListener("click", (e) => {
-  if (
-    !navContainer.contains(e.target) &&
-    !menuToggle.contains(e.target)
-  ) {
-    menuToggle.classList.remove("active");
+  const isClickInside =
+    navContainer.contains(e.target) || menuToggle.contains(e.target);
+
+  if (!isClickInside) {
     navContainer.classList.remove("active");
+    menuToggle.classList.remove("active");
   }
 });
 
-window.addEventListener("scroll", debounce(() => {
+window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
   const offset = scrollY * 0.6;
 
   // Adjust speed here (0.3 = slow, 0.6 = faster)
 
   document.body.style.backgroundPositionY = `center ${offset}px`;
-}));
-
-// 🚀 Warp-drive navigation effect
-const warpLinks = document.querySelectorAll("a[href]");
-
-warpLinks.forEach((link) => {
-  link.addEventListener("click", function (e) {
-    const url = link.getAttribute("href");
-
-    // Ignore external links or anchors
-    if (
-      url.startsWith("http") ||
-      url.startsWith("#") ||
-      link.target === "_blank"
-    ) {
-      return;
-    }
-
-    e.preventDefault();
-
-    // Activate warp effect
-    document.body.classList.add("warping");
-
-    // Delay navigation
-    setTimeout(() => {
-      window.location.href = url;
-    }, 400); // match CSS timing
-  });
-}); 
+});
