@@ -300,22 +300,20 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
 
-const heroText = document.querySelector(".hero-text");
+  /* =========================
+     1. HERO FADE
+  ========================= */
+  const heroText = document.querySelector(".hero-text");
+  const navbar = document.querySelector(".navbar");
 
-if (heroText) {
-  const navbar = document.querySelector(".navbar"); // sticky navbar
-
-  window.addEventListener("scroll", () => {
-    // Distance from top of page
-    const scrollY = window.scrollY;
-
-    // Get navbar height
+  if (heroText && navbar) {
     const navHeight = navbar.offsetHeight;
 
-    // Fade starts when text reaches navbar, ends when it's fully under
-    const fadeStart = navHeight; // start fading when scrolling past navbar
-    const fadeEnd = navHeight + 150; // fully faded after 150px
+    const fadeStart = navHeight;
+    const fadeEnd = navHeight + 150;
 
     let opacity = 1;
 
@@ -324,14 +322,14 @@ if (heroText) {
     }
 
     heroText.style.opacity = opacity;
-  });
-}
+  }
 
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".navbar a");
+  /* =========================
+     2. ACTIVE NAV LINK
+  ========================= */
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".navbar a");
 
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
   let current = "";
 
   sections.forEach((section) => {
@@ -345,21 +343,33 @@ window.addEventListener("scroll", () => {
 
   navLinks.forEach((link) => {
     link.classList.remove("active");
+
     if (link.getAttribute("href") === "#" + current) {
       link.classList.add("active");
     }
   });
-});
 
-window.addEventListener("scroll", () => {
+  /* =========================
+     3. PROGRESS BAR
+  ========================= */
   const scrollTop = document.documentElement.scrollTop;
   const scrollHeight =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
 
   const scrollPercent = (scrollTop / scrollHeight) * 100;
-  document.getElementById("progress-bar").style.width = scrollPercent + "%";
-});
+
+  const progressBar = document.getElementById("progress-bar");
+  if (progressBar) {
+    progressBar.style.width = scrollPercent + "%";
+  }
+
+  /* =========================
+     4. PARALLAX BACKGROUND
+  ========================= */
+  const offset = scrollY * 0.6;
+  document.body.style.backgroundPosition = `center ${offset}px`;
+}); 
 
 // Get elements
 const menuToggle = document.getElementById("menu-toggle");
@@ -393,13 +403,4 @@ document.addEventListener("click", (e) => {
     navContainer.classList.remove("active");
     menuToggle.classList.remove("active");
   }
-});
-
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-  const offset = scrollY * 0.4;
-
-  // Adjust speed here (0.3 = slow, 0.6 = faster)
-
-  document.body.style.backgroundPosition = `center ${offset}px`;
 });
