@@ -92,12 +92,12 @@ if (canvas) {
       }
     });
 
-    // 🌠 Random shooting star
+    // Random shooting star
     if (Math.random() < 0.0005) {
       createShootingStar();
     }
 
-    // 🌠 Draw shooting stars
+    // Draw shooting stars
     shootingStars.forEach((star, index) => {
       const tailX = star.x - (star.vx * star.length) / 10;
       const tailY = star.y - (star.vy * star.length) / 10;
@@ -129,14 +129,14 @@ if (canvas) {
     requestAnimationFrame(animateStars);
   }
 
-  // 🔄 Resize handling
+  // Resize handling
   window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     initStars(); // re-generate stars
   });
 
-  // 🚀 Initialize + start animation
+  // Initialize + start animation
   initStars();
   animateStars();
 }
@@ -193,6 +193,14 @@ if (featuredContainer) {
   });
 }
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
 const container = document.getElementById("blog-container");
 
 if (container) {
@@ -211,6 +219,7 @@ if (container) {
 
     container.appendChild(card);
 
+    card.classList.add("show");
     observer.observe(card);
   });
 }
@@ -289,14 +298,6 @@ filterButtons.forEach((button) => {
         post.style.display = "none";
       }
     });
-  });
-});
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
   });
 });
 
@@ -380,7 +381,7 @@ if (menuToggle && navContainer) {
 // Toggle menu (clean version)
 menuToggle.addEventListener("click", () => {
   navContainer.classList.toggle("active");
-  menuToggle.classList.toggle("active"); // 👈 triggers animation
+  menuToggle.classList.toggle("active"); // triggers animation
 });
 }
 
