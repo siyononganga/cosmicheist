@@ -210,6 +210,8 @@ if (container) {
     `;
 
     container.appendChild(card);
+
+    observer.observe(card);
   });
 }
 
@@ -298,9 +300,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-const hiddenElements = document.querySelectorAll(".blog-post");
-
-hiddenElements.forEach((el) => observer.observe(el));
 
 const heroText = document.querySelector(".hero-text");
 
@@ -359,7 +358,6 @@ window.addEventListener("scroll", () => {
     document.documentElement.clientHeight;
 
   const scrollPercent = (scrollTop / scrollHeight) * 100;
-
   document.getElementById("progress-bar").style.width = scrollPercent + "%";
 });
 
@@ -367,11 +365,14 @@ window.addEventListener("scroll", () => {
 const menuToggle = document.getElementById("menu-toggle");
 const navContainer = document.getElementById("nav-links");
 
+if (menuToggle && navContainer) {
+
 // Toggle menu (clean version)
 menuToggle.addEventListener("click", () => {
   navContainer.classList.toggle("active");
   menuToggle.classList.toggle("active"); // 👈 triggers animation
-}); 
+});
+}
 
 // Close when link clicked
 const navItems = document.querySelectorAll(".nav-links a");
@@ -396,7 +397,7 @@ document.addEventListener("click", (e) => {
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
-  const offset = scrollY * 0.6;
+  const offset = scrollY * 0.4;
 
   // Adjust speed here (0.3 = slow, 0.6 = faster)
 
