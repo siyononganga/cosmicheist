@@ -400,5 +400,5 @@ window.addEventListener("scroll", () => {
 
   // Adjust speed here (0.3 = slow, 0.6 = faster)
 
-  document.body.style.backgroundPositionY = `center ${offset}px`;
+  document.body.style.backgroundPosition = `center ${offset}px`;
 });
