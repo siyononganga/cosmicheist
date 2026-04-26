@@ -11,11 +11,11 @@ body {
   font-family: Arial, sans-serif;
   /*line-height: 1.6;*/
   color: white;
-  background-image: none;
+  /*background-image: none;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  will-change: background-position;
+  will-change: background-position;*/
 }
 
 .bg-layer {
