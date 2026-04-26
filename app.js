@@ -301,8 +301,25 @@ filterButtons.forEach((button) => {
   });
 });
 
+let latestScrollY = 0;
+let ticking = false;
+
+function updateParallax() {
+  const offset = latestScrollY * 0.4;
+  document.body.style.backgroundPosition = `center ${offset}px`;
+
+  ticking = false;
+}
+
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
+
+  latestScrollY = scrollY;
+
+  if (!ticking) {
+    requestAnimationFrame(updateParallax);
+    ticking = true;
+  }
 
   /* =========================
      1. HERO FADE
@@ -364,13 +381,7 @@ window.addEventListener("scroll", () => {
   if (progressBar) {
     progressBar.style.width = scrollPercent + "%";
   }
-
-  /* =========================
-     4. PARALLAX BACKGROUND
-  ========================= */
-  const offset = scrollY * 0.6;
-  document.body.style.backgroundPosition = `center ${offset}px`;
-}); 
+});
 
 // Get elements
 const menuToggle = document.getElementById("menu-toggle");
