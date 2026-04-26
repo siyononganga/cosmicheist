@@ -15,7 +15,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /*position: relative;*/
+  will-change: background-position;
 }
 
 header {
