@@ -301,20 +301,22 @@ filterButtons.forEach((button) => {
   });
 });
 
+const bgLayer = document.querySelector(".bg-layer");
+
 let latestScrollY = 0;
 let ticking = false;
 
 function updateParallax() {
-  const offset = latestScrollY * 0.4;
-  document.body.style.backgroundPosition = `center ${offset}px`;
+  if (bgLayer) {
+    const offset = latestScrollY * 0.25; // smoother layer movement
+    bgLayer.style.transform = `translate3d(0, ${offset}px, 0)`;
+  }
 
   ticking = false;
 }
 
 window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-
-  latestScrollY = scrollY;
+  latestScrollY = window.scrollY;
 
   if (!ticking) {
     requestAnimationFrame(updateParallax);
