@@ -308,8 +308,8 @@ let ticking = false;
 
 function updateParallax() {
   if (bgLayer) {
-    const offset = latestScrollY * 0.25; // smoother layer movement
-    bgLayer.style.transform = `translate3d(0, ${offset}px, 0)`;
+    const offset = latestScrollY * 0.15; // smoother layer movement
+    bgLayer.style.transform = `translate3d(0, -${offset}px, 0)`;
   }
 
   ticking = false;
