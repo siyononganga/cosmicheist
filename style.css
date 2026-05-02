@@ -400,6 +400,20 @@ img {
   line-height: 1.7;
 }
 
+.article-hero {
+  text-align: center;
+  padding: 120px 20px 50px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.article-hero h1{
+  font-size: clamp(32px, 5vw, 56px);
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 0 0 15px rgba(108, 204, 255, 0, 25);
+}
+
 .post-date {
   font-size: 14px;
 
@@ -420,10 +434,8 @@ img {
 
 .article-meta {
   font-size: 14px;
-
-  opacity: 0.8;
-
-  margin-bottom: 25px;
+  opacity: 0.85;
+  margin-bottom: 10px;
 }
 
 .article-nav {
