@@ -414,6 +414,21 @@ img {
   text-shadow: 0 0 15px rgba(108, 204, 255, 0, 25);
 }
 
+.article-hero-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 40px;
+}
+
+.article-hero-image img {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+}
 .post-date {
   font-size: 14px;
 
@@ -441,7 +456,7 @@ img {
 .article-nav {
   display: flex;
   justify-content: space-between;
-  /**margin-top: 40px;**/
+  margin-top: 40px;
 }
 
 .article-nav a {
