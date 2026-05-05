@@ -148,6 +148,7 @@ const posts = [
     link: "posts/the-big-bang.html",
     date: "2026-03-15",
     category: "Cosmology",
+    image: "images/crystal-shatter.png"
   },
 
   {
@@ -210,6 +211,8 @@ if (container) {
     card.setAttribute("data-category", post.category);
 
     card.innerHTML = `
+      <img class="post-thumb" src="$
+      {post-image}" alt="${post.title}" />
       <h2>${post.title}</h2>
       <p class="post-date">${post.date}</p>
       <p class="post-category">${post.category}</p>
