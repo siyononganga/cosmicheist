@@ -610,18 +610,7 @@ img {
 
   /* Headings */
   .hero-text h1 {
-    font-size: 30px;
-    position: relative;
-    z-index: 1;
-
-    /* Fades the bottom of the hero text so it blends under navbar */
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
-
-    mask-repeat: no-repeat;
-    mask-size: 100% 100%;
-
-    transition: all 0.3s ease; /* smooth fade on scroll if needed */
+    font-size: 40px;
   }
 
   .blog-post h2 {
