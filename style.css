@@ -442,6 +442,28 @@ img {
   border-radius: 10px;
 }
 
+.article-figure {
+  margin: 40px auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.article-figure img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+.article-figure figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
 .post-date {
   font-size: 14px;
 
