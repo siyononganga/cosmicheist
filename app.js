@@ -148,6 +148,7 @@ const posts = [
     link: "posts/the-big-bang.html",
     date: "2026-03-15",
     category: "Cosmology",
+    featured: true,
     image: "images/crystal-shatter.png"
   },
 
@@ -174,7 +175,6 @@ const posts = [
     link: "posts/fourth-dimension.html",
     date: "2026-04-11",
     category: "Cosmology",
-    featured: true,
   },
 ];
 
