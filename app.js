@@ -149,7 +149,7 @@ const posts = [
     date: "2026-03-15",
     category: "Cosmology",
     featured: true,
-    image: "../images/crystal-shatter.png"
+    image: "images/crystal-shatter.png"
   },
 
   {
