@@ -211,8 +211,7 @@ if (container) {
     card.setAttribute("data-category", post.category);
 
     card.innerHTML = `
-      <img class="post-thumb" src="${post.image}"
-      alt="${post.title}" />
+      <img class="post-thumb" src="${post.image}" alt="${post.title}" />
       <h2>${post.title}</h2>
       <p class="post-date">${post.date}</p>
       <p class="post-category">${post.category}</p>
