@@ -429,6 +429,15 @@ img {
   border-radius: 14px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
 }
+
+.article-image {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 30px;
+  border-radius: 10px;
+}
+
 .post-date {
   font-size: 14px;
 
