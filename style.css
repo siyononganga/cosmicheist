@@ -256,7 +256,7 @@ header {
 }
 
 .latest h2 {
-  font-size: 24px;
+  font-size: 30px;
 
 }
 
@@ -287,8 +287,16 @@ header {
 }
 
 /* 📦 Blog card */
+/* SCROLL ANIMATION */
+
 .blog-post {
-  display: flex;
+  opacity: 0;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+  display: block;
   justify-content: space-between;
   flex-direction: column;
   max-width: 700px;
@@ -296,6 +304,18 @@ header {
   height: 100%;
   padding: 15px;
   border-radius: 12px;
+  background: rgba(255, 255, 255, 0.3);
+
+  backdrop-filter: blur(10px);
+  /*-webkit-backdrop-filter: blur(10px);*/
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  transition: transform 0.3s;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* 📝 Paragraph spacing */
@@ -311,28 +331,7 @@ img {
   height: auto;
 }*/
 
-.blog-post {
-  background: rgba(255, 255, 255, 0.3);
 
-  backdrop-filter: blur(10px);
-  /*-webkit-backdrop-filter: blur(10px);*/
-
-  padding: 30px;
-
-  border-radius: 10px;
-
-  transition: transform 0.3s;
-
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-/* SCROLL ANIMATION */
-
-.blog-post {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
 
 /* when visible */
 

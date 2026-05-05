@@ -207,9 +207,10 @@ const container = document.getElementById("blog-container");
 
 if (container) {
   posts.forEach((post) => {
-    const card = document.createElement("article");
+    const card = document.createElement("a");
     card.classList.add("blog-post");
-    card.setAttribute("data-category", post.category);
+    card.href = post.link;
+    /*card.setAttribute("data-category", post.category);*/
 
     card.innerHTML = `
       <img class="post-thumb" src="${post.image}" alt="${post.title}" />
@@ -217,7 +218,6 @@ if (container) {
       <p class="post-date">${post.date}</p>
       <p class="post-category">${post.category}</p>
       <p>${post.description}</p>
-      <a href="${post.link}">Read more →</a>
     `;
 
     container.appendChild(card);
