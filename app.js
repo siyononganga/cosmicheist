@@ -186,10 +186,11 @@ if (featuredContainer) {
   posts.forEach((post) => {
     if (post.featured) {
       featuredContainer.innerHTML = `
-<h2>${post.title}</h2>
-<p>${post.description}</p>
-<a href="${post.link}">Read full article →</a>
-`;
+      <img src="${post.image}" class="featured-thumb" alt="${post.title}" />
+      <h2>${post.title}</h2>
+      <p>${post.description}</p>
+      <a href="${post.link}">Read full article →</a>
+      `;
     }
   });
 }
