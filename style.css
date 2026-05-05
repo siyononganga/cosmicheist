@@ -374,6 +374,7 @@ img {
 
 .article-page {
   max-width: 800px;
+  width: 90%;
 
   margin: auto;
 
@@ -386,6 +387,8 @@ img {
   border-radius: 12px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
+  
+  overflow: hidden;
 }
 
 .article-page h1 {
