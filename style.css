@@ -63,8 +63,10 @@ header {
 /* NAVBAR */
 .navbar {
   flex-wrap: nowrap;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
 
   display: flex;
   justify-content: space-between;
@@ -205,7 +207,7 @@ header {
 
 .hero {
   text-align: center;
-  padding: 120px 20px;
+  padding-top: 100px;
 }
 
 .hero h2 {
@@ -396,7 +398,7 @@ img {
 
   margin: auto;
 
-  padding: 20px;
+  padding-top: 100px;
 
   background: rgba(255, 255, 255, 0.15);
 
@@ -423,7 +425,7 @@ img {
 
 .article-hero {
   text-align: center;
-  padding: 120px 20px 50px;
+  padding-top: 100px;
   max-width: 900px;
   margin: auto;
 }
