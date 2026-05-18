@@ -304,7 +304,9 @@ filterButtons.forEach((button) => {
   });
 });
 
-const bgLayer = document.querySelector(".bg-layer");
+const bgLayer = document.body.classList.contains("home-page")
+? document.querySelector(".bg-layer")
+: null;
 
 let latestScrollY = 0;
 let ticking = false;
