@@ -167,6 +167,7 @@ const posts = [
     link: "posts/space-time.html",
     date: "2026-04-01",
     category: "Cosmology",
+    image: "images/reflecting-crystal.png"
   },
 
   {
