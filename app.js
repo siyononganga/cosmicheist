@@ -158,6 +158,7 @@ const posts = [
     link: "posts/dark-matter.html",
     date: "2026-03-22",
     category: "Cosmology",
+    image: "images/dark-matter.png"
   },
 
   {
@@ -176,6 +177,7 @@ const posts = [
     link: "posts/fourth-dimension.html",
     date: "2026-04-11",
     category: "Cosmology",
+    image: "images/4th-dimension.png"
   },
 ];
 
